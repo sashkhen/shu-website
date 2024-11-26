@@ -1,0 +1,91 @@
+@mixin colors {
+  --color-pink-h: 350;
+  --color-pink-s: 19%;
+  --color-pink-l: 87%;
+  --color-purple-h: 245;
+  --color-purple-s: 70%;
+  --color-purple-l: 56%;
+  --color-black-h: 90;
+  --color-black-s: 3%;
+  --color-black-l: 15%;
+  --color-white-h: 80;
+  --color-white-s: 3.45%;
+  --color-white-l: 82.94%;
+  --color-yellow-h: 44;
+  --color-yellow-s: 100%;
+  --color-yellow-l: 52%;
+  --color-orange-h: 19;
+  --color-orange-s: 97%;
+  --color-orange-l: 51%;
+  --color-green-h: 81.78;
+  --color-green-s: 76.59%;
+  --color-green-l: 40.2%;
+  --color-violet-h: 265;
+  --color-violet-s: 83%;
+  --color-violet-l: 57%;
+  --color-blue-h: 217;
+  --color-blue-s: 100%;
+  --color-blue-l: 61%;
+
+  --color-pink: hsl(
+    var(--color-pink-h),
+    var(--color-pink-s),
+    var(--color-pink-l)
+  );
+  --color-purple: hsl(
+    var(--color-purple-h),
+    var(--color-purple-s),
+    var(--color-purple-l)
+  );
+  --color-black: hsl(
+    var(--color-black-h),
+    var(--color-black-s),
+    var(--color-black-l)
+  );
+  --color-white: hsl(
+    var(--color-white-h),
+    var(--color-white-s),
+    var(--color-white-l)
+  );
+  --color-yellow: hsl(
+    var(--color-yellow-h),
+    var(--color-yellow-s),
+    var(--color-yellow-l)
+  );
+  --color-orange: hsl(
+    var(--color-orange-h),
+    var(--color-orange-s),
+    var(--color-orange-l)
+  );
+  --color-green: hsl(
+    var(--color-green-h),
+    var(--color-green-s),
+    var(--color-green-l)
+  );
+  --color-violet: hsl(
+    var(--color-violet-h),
+    var(--color-violet-s),
+    var(--color-violet-l)
+  );
+  --color-blue: hsl(
+    var(--color-blue-h),
+    var(--color-blue-s),
+    var(--color-blue-l)
+  );
+}
+
+@mixin darkMode {
+  :root {
+    &[data-theme-source="user"] {
+      &[data-theme-mode="dark"] {
+        @content;
+      }
+    }
+
+    &[data-theme-source="auto"] {
+      @media (prefers-color-scheme: dark) {
+        @content;
+      }
+    }
+  }
+}

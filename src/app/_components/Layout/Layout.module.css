@@ -1,0 +1,29 @@
+.root {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'header header'
+    'aside main';
+  align-content: start;
+}
+
+.header {
+  grid-area: header;
+  padding: 2rem;
+}
+
+.aside:not(:empty) {
+  grid-area: aside;
+  padding: 2rem;
+}
+
+.main {
+  grid-area: main;
+  padding: 2rem;
+}

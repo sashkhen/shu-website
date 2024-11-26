@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  text-transform: lowercase;
+  font-weight: 600;
+  font-family: monospace;
+}

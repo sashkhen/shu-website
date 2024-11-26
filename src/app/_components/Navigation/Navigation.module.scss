@@ -1,0 +1,74 @@
+@use "../../_styles/theme";
+
+.root {
+  --color: var(--color-black);
+  --color-hover: hsl(
+    var(--color-black-h),
+    var(--color-black-s),
+    calc(var(--color-black-l) - 5%)
+  );
+
+  :root[data-theme-variant="purple"] & {
+    --color: var(--color-purple);
+    --color-hover: hsl(
+      var(--color-purple-h),
+      var(--color-purple-s),
+      calc(var(--color-purple-l) - 5%)
+    );
+  }
+
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+@include theme.darkMode {
+  .root {
+    --color: var(--color-white);
+    --color-hover: hsl(
+      var(--color-white-h),
+      var(--color-white-s),
+      calc(var(--color-white-l) - 5%)
+    );
+  }
+
+  &[data-theme-variant="purple"] .root {
+    --color: var(--color-pink);
+    --color-hover: hsl(
+      var(--color-pink-h),
+      var(--color-pink-s),
+      calc(var(--color-pink-l) - 5%)
+    );
+  }
+}
+
+.list {
+  gap: 1.5rem;
+  // grid-auto-flow: row;
+
+  @media screen and (min-width: 768px) {
+    grid-auto-flow: column;
+  }
+
+  &::before {
+    border-radius: 1.75rem;
+    border: 0.125rem solid var(--color);
+  }
+}
+
+.item {
+  padding: 1rem 1.75rem;
+  transition-property: color;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--color-hover);
+    }
+  }
+}

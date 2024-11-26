@@ -1,0 +1,139 @@
+@use "sass:math";
+@use "../../_styles/theme";
+
+$elements-count: 100;
+
+@mixin square($color) {
+  border: #{math.random(10)}px solid $color;
+}
+
+@mixin circle($color) {
+  border-radius: 50%;
+  border: #{math.random(10)}px solid $color;
+}
+
+@mixin disc($color) {
+  border-radius: 50%;
+  background-color: $color;
+}
+
+@mixin cross($color) {
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: #{(math.random(15) + 10%)};
+    background-color: $color;
+    border-radius: 0.25rem;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.root {
+  --color-1: var(--color-yellow);
+  --color-2: var(--color-orange);
+  --color-3: var(--color-green);
+  --color-4: var(--color-violet);
+  --color-5: var(--color-blue);
+
+  :root[data-theme-variant="purple"] & {
+    --color-1: var(--color-purple);
+    --color-2: var(--color-purple);
+    --color-3: var(--color-purple);
+    --color-4: var(--color-purple);
+    --color-5: var(--color-purple);
+  }
+
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+@include theme.darkMode {
+  &[data-theme-variant="purple"] {
+    .root {
+      --color-1: var(--color-pink);
+      --color-2: var(--color-pink);
+      --color-3: var(--color-pink);
+      --color-4: var(--color-pink);
+      --color-5: var(--color-pink);
+    }
+  }
+}
+
+.dot {
+  position: absolute;
+  display: block;
+}
+
+@for $i from 1 through $elements-count {
+  $size: #{math.random(26)}px;
+  $color: var(--color-#{math.random(5)}, #000);
+  $opacity: calc(0.4 + 0.4 / math.random(10));
+  $duration: calc(10 + 100 / math.random(10));
+  $turns: math.random(5) + 4;
+  $top: math.random(100) * 1%;
+  $toTop: math.random(100) * 1% * -1;
+  $left: math.random(100) * 1%;
+
+  @keyframes dot-#{$i} {
+    10% {
+      opacity: $opacity;
+    }
+
+    @for $i from 1 through $turns {
+      $threshold: calc($i * 99% / $turns);
+
+      #{$threshold} {
+        transform: translateX(
+            #{(math.random(25) + 25) * (math.random(2) - 1)}px
+          )
+          rotate(#{math.random(360)}deg);
+      }
+    }
+
+    100% {
+      top: $toTop;
+    }
+  }
+
+  .dot:nth-child(#{$i}) {
+    top: calc(#{$top} + 100vh);
+    left: $left;
+    width: $size;
+    height: $size;
+    opacity: 0;
+    animation: dot-#{$i} #{$duration}s ease-out infinite;
+
+    :root[data-theme-variant="purple"] & {
+      @include disc($color);
+    }
+
+    :root:not([data-theme-variant="purple"]) & {
+      @if ($i % 3 == 0) {
+        @include cross($color);
+      }
+
+      @if ($i % 3 == 1) {
+        @include square($color);
+      }
+
+      @if ($i % 3 == 2) {
+        @include circle($color);
+      }
+    }
+  }
+}

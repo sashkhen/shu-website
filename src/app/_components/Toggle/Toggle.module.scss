@@ -1,0 +1,71 @@
+@use "../../_styles/theme";
+
+.root {
+  --ratio: var(--toggle-ratio, 1.75);
+  --border: var(--toggle-border, 0.25rem);
+  --height: var(--toggle-height, 2rem);
+  --width: calc(var(--height) * var(--ratio));
+
+  --color-toggle: hsl(var(--color-white-h), var(--color-white-s), 100%);
+  --color-inactive: hsl(var(--color-white-h), var(--color-white-s), 80%);
+  --color-active: var(--foreground);
+
+  position: relative;
+  display: inline-block;
+  width: var(--width);
+  height: var(--height);
+}
+
+@include theme.darkMode {
+  .root {
+    --color-active: var(--color-orange);
+  }
+}
+
+.input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--height);
+  background-color: var(--color-inactive);
+  transition-property: background-color, box-shadow;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: calc(var(--height) - var(--border) * 2);
+  width: calc(var(--height) - var(--border) * 2);
+  left: var(--border);
+  bottom: var(--border);
+  border-radius: 50%;
+  background-color: var(--color-toggle);
+  transition-property: background-color, box-shadow, transform;
+}
+
+.slider,
+.slider::before {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.input:checked + .slider {
+  background-color: var(--color-active);
+}
+
+// .input:focus + .slider {
+//   box-shadow: 0 0 1px var(--color-active);
+// }
+
+.input:checked + .slider:before {
+  transform: translateX(calc(var(--height) * (var(--ratio) - 1)));
+}
