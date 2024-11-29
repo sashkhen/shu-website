@@ -7,7 +7,7 @@
   --width: calc(var(--height) * var(--ratio));
 
   --color-toggle: hsl(var(--color-white-h), var(--color-white-s), 100%);
-  --color-inactive: hsl(var(--color-white-h), var(--color-white-s), 80%);
+  --color-inactive: hsl(var(--color-white-h), var(--color-white-s), 75%);
   --color-active: var(--foreground);
 
   position: relative;
@@ -18,7 +18,12 @@
 
 @include theme.darkMode {
   .root {
+    --color-inactive: var(--color-white);
     --color-active: var(--color-orange);
+  }
+
+  &[data-theme-variant="purple"] .root {
+    --color-inactive: var(--color-pink);
   }
 }
 

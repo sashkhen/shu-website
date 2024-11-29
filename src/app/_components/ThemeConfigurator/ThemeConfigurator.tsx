@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 
-import { ThemeMode, ThemeVariant, useTheme } from "@/app/_contexts/ThemeProvider/ThemeProvider";
+import { ThemeMode, ThemeVariant, useTheme } from "@/app/_contexts/ThemeProvider";
 
 import { Toggle } from "../Toggle";
 import styles from "./ThemeConfigurator.module.scss";

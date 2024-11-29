@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { cookies } from "next/headers";
 
 import { Layout } from "./_components/Layout";
-import { ThemeMode } from "./_contexts/ThemeProvider/ThemeProvider";
+import { ThemeMode } from "./_contexts/ThemeProvider";
 import Providers from "./providers";
 
-const geistSans = localFont({
-  src: "./_fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const parkinsans = localFont({
+  src: "./_fonts/Parkinsans[wght].woff2",
+  variable: "--font-parkinsans",
+  weight: "300 800",
 });
 const geistMono = localFont({
   src: "./_fonts/GeistMonoVF.woff",
@@ -36,7 +38,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en" data-theme-source="auto" data-theme-mode={cookieThemeMode}>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${parkinsans.variable} ${inter.variable} ${geistMono.variable}`}
+      >
         <Providers theme={{ mode: cookieThemeMode }}>
           <Layout>{children}</Layout>
         </Providers>
