@@ -1,41 +1,53 @@
+@use "../../_styles/mixins";
+
 .root {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
   align-items: center;
-
-  @media screen and (min-width: 1024px) {
-    grid-template-columns: 8fr 4fr;
-    min-height: 70vh;
-  }
+  text-align: center;
+  min-height: 100%;
 }
 
 .title {
-  font-family: var(--font-parkinsans);
   font-weight: 700;
   font-size: 4rem;
 
-  @media screen and (min-width: 1024px) {
-    font-size: 7rem;
+  @include mixins.desktop {
+    font-size: 6rem;
   }
 }
 
 .subtitle {
+  margin: 2rem auto 3rem;
   font-weight: 700;
   font-size: 3rem;
-  font-family: var(--font-inter);
-  font-style: italic;
 
-  @media screen and (min-width: 1024px) {
+  @include mixins.desktop {
     font-size: 4rem;
+  }
+}
+
+.description {
+  margin: 1rem auto 0;
+  max-width: 60rem;
+  font-size: 1.25rem;
+  line-height: 1.75;
+
+  @include mixins.desktop {
+    &:first-of-type {
+      font-size: 1.25rem;
+    }
   }
 }
 
 .illustration {
   position: relative;
   width: 100%;
+  max-width: 12rem;
   overflow: hidden;
   margin: 0 auto;
+  text-align: center;
 
   svg {
     display: block;

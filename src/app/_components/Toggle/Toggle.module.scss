@@ -18,12 +18,8 @@
 
 @include theme.darkMode {
   .root {
-    --color-inactive: var(--color-white);
+    --color-inactive: var(--foreground);
     --color-active: var(--color-orange);
-  }
-
-  &[data-theme-variant="purple"] .root {
-    --color-inactive: var(--color-pink);
   }
 }
 

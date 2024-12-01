@@ -1,73 +1,57 @@
 @use "../../_styles/theme";
+@use "../../_styles/mixins";
 
 .root {
-  --color: var(--color-black);
+  --color: var(--foreground);
   --color-hover: hsl(
-    var(--color-black-h),
-    var(--color-black-s),
-    calc(var(--color-black-l) - 5%)
+    var(--foreground-h),
+    var(--foreground-s),
+    calc(var(--foreground-l) - 5%)
   );
-
-  :root[data-theme-variant="purple"] & {
-    --color: var(--color-purple);
-    --color-hover: hsl(
-      var(--color-purple-h),
-      var(--color-purple-s),
-      calc(var(--color-purple-l) - 5%)
-    );
-  }
+  --space: 1.5rem;
 
   display: flex;
   gap: 1rem;
-  justify-content: flex-end;
+  width: 100%;
+  justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-family: var(--font-parkinsans);
-}
 
-@include theme.darkMode {
-  .root {
-    --color: var(--color-white);
-    --color-hover: hsl(
-      var(--color-white-h),
-      var(--color-white-s),
-      calc(var(--color-white-l) - 5%)
-    );
-  }
-
-  &[data-theme-variant="purple"] .root {
-    --color: var(--color-pink);
-    --color-hover: hsl(
-      var(--color-pink-h),
-      var(--color-pink-s),
-      calc(var(--color-pink-l) - 5%)
-    );
+  @include mixins.tablet {
+    justify-content: flex-end;
   }
 }
 
 .list {
-  gap: 1.5rem;
+  gap: var(--space);
 
-  @media screen and (min-width: 768px) {
-    grid-auto-flow: column;
-  }
-
-  &::before {
-    border-radius: 1.75rem;
-    border: 0.125rem solid var(--color);
+  [data-role="slider"] {
+    border-bottom: 0.125rem solid var(--foreground);
   }
 }
 
 .item {
-  padding: 1rem 1.75rem;
+  position: relative;
+  padding: 0.5rem 1rem;
   transition-property: color;
   font-weight: 500;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1;
 
-  @media (hover: hover) and (pointer: fine) {
+  @include mixins.hover {
     &:hover {
       color: var(--color-hover);
     }
+  }
+
+  @include mixins.tablet {
+    padding: 0.875rem 1.75rem;
+  }
+
+  &:not(:first-of-type)::before {
+    content: "/";
+    position: absolute;
+    left: calc(var(--space) / 2 * -1);
+    transform: translateX(-50%);
   }
 }

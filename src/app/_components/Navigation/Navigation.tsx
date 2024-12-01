@@ -21,8 +21,12 @@ const LINKS = [
     pathname: "/",
   },
   {
-    label: "Portfolio",
-    pathname: "/portfolio",
+    label: "About",
+    pathname: "/about",
+  },
+  {
+    label: "Contact",
+    pathname: "/contact",
   },
 ];
 

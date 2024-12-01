@@ -12,7 +12,7 @@
   gap: 1rem;
   grid-auto-flow: column;
 
-  &::before {
+  [data-role="slider"] {
     content: "";
     position: absolute;
     top: var(--active-offset-y, 0);

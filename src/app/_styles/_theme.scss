@@ -27,50 +27,59 @@
   --color-blue-s: 100%;
   --color-blue-l: 61%;
 
-  --color-pink: hsl(
+  --color-pink: hsla(
     var(--color-pink-h),
     var(--color-pink-s),
-    var(--color-pink-l)
+    var(--color-pink-l),
+    var(--color-pink-o, 1)
   );
-  --color-purple: hsl(
+  --color-purple: hsla(
     var(--color-purple-h),
     var(--color-purple-s),
-    var(--color-purple-l)
+    var(--color-purple-l),
+    var(--color-purple-o, 1)
   );
-  --color-black: hsl(
+  --color-black: hsla(
     var(--color-black-h),
     var(--color-black-s),
-    var(--color-black-l)
+    var(--color-black-l),
+    var(--color-black-o, 1)
   );
-  --color-white: hsl(
+  --color-white: hsla(
     var(--color-white-h),
     var(--color-white-s),
-    var(--color-white-l)
+    var(--color-white-l),
+    var(--color-white-o, 1)
   );
-  --color-yellow: hsl(
+  --color-yellow: hsla(
     var(--color-yellow-h),
     var(--color-yellow-s),
-    var(--color-yellow-l)
+    var(--color-yellow-l),
+    var(--color-yellow-o, 1)
   );
-  --color-orange: hsl(
+  --color-orange: hsla(
     var(--color-orange-h),
     var(--color-orange-s),
-    var(--color-orange-l)
+    var(--color-orange-l),
+    var(--color-orange-o, 1)
   );
-  --color-green: hsl(
+  --color-green: hsla(
     var(--color-green-h),
     var(--color-green-s),
-    var(--color-green-l)
+    var(--color-green-l),
+    var(--color-green-o, 1)
   );
-  --color-violet: hsl(
+  --color-violet: hsla(
     var(--color-violet-h),
     var(--color-violet-s),
-    var(--color-violet-l)
+    var(--color-violet-l),
+    var(--color-violet-o, 1)
   );
-  --color-blue: hsl(
+  --color-blue: hsla(
     var(--color-blue-h),
     var(--color-blue-s),
-    var(--color-blue-l)
+    var(--color-blue-l),
+    var(--color-blue-o, 1)
   );
 }
 

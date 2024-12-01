@@ -6,12 +6,8 @@ import styles from "./page.module.scss";
 export default function Home() {
   return (
     <div className={styles.root}>
-      <section>
-        <Hero />
-      </section>
-      <section>
-        <ThemeConfigurator />
-      </section>
+      <Hero />
+      <ThemeConfigurator />
       <Background />
     </div>
   );

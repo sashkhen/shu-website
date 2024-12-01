@@ -3,25 +3,54 @@
 :root {
   @include theme.colors;
 
-  --background: var(--color-white);
-  --foreground: var(--color-black);
+  --background-h: var(--color-white-h);
+  --background-s: var(--color-white-s);
+  --background-l: var(--color-white-l);
+  --foreground-h: var(--color-black-h);
+  --foreground-s: var(--color-black-s);
+  --foreground-l: var(--color-black-l);
+
+  --background: hsla(
+    var(--background-h),
+    var(--background-s),
+    var(--background-l),
+    var(--background-o, 1)
+  );
+  --foreground: hsla(
+    var(--foreground-h),
+    var(--foreground-s),
+    var(--foreground-l),
+    var(--foreground-o, 1)
+  );
 
   color-scheme: var(--color-scheme, light);
 
   &[data-theme-variant="purple"] {
-    --background: var(--color-pink);
-    --foreground: var(--color-purple);
+    --background-h: var(--color-pink-h);
+    --background-s: var(--color-pink-s);
+    --background-l: var(--color-pink-l);
+    --foreground-h: var(--color-purple-h);
+    --foreground-s: var(--color-purple-s);
+    --foreground-l: var(--color-purple-l);
   }
 }
 
 @include theme.darkMode {
   --color-scheme: dark;
-  --background: var(--color-black);
-  --foreground: var(--color-white);
+  --background-h: var(--color-black-h);
+  --background-s: var(--color-black-s);
+  --background-l: var(--color-black-l);
+  --foreground-h: var(--color-white-h);
+  --foreground-s: var(--color-white-s);
+  --foreground-l: var(--color-white-l);
 
   &[data-theme-variant="purple"] {
-    --background: var(--color-purple);
-    --foreground: var(--color-pink);
+    --background-h: var(--color-purple-h);
+    --background-s: var(--color-purple-s);
+    --background-l: var(--color-purple-l);
+    --foreground-h: var(--color-pink-h);
+    --foreground-s: var(--color-pink-s);
+    --foreground-l: var(--color-pink-l);
   }
 }
 
@@ -34,13 +63,8 @@
 }
 
 *::selection {
-  color: var(--color-white);
-  background-color: var(--color-black);
-
-  :root[data-theme-variant="purple"] & {
-    color: var(--color-pink);
-    background-color: var(--color-purple);
-  }
+  color: var(--background);
+  background-color: var(--foreground);
 }
 
 @include theme.darkMode {
@@ -60,7 +84,7 @@ body {
   position: relative;
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
+  font-family: var(--font-iosevka), system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;

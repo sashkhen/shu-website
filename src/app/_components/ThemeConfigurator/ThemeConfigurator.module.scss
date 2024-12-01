@@ -1,14 +1,25 @@
+@use "../../_styles/mixins";
+
 .root {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  align-items: flex-end;
+  flex-direction: column;
+
+  @include mixins.tablet {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .field {
   display: flex;
-  gap: 0.5rem;
+  gap: 2rem;
   align-items: center;
   text-transform: lowercase;
   font-weight: 600;
-  font-family: var(--font-geist-mono);
+
+  @include mixins.tablet {
+    gap: 0.5rem;
+  }
 }
