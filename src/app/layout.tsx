@@ -3,7 +3,7 @@ import "./globals.scss";
 
 import localFont from "next/font/local";
 
-import { Layout } from "./_components/Layout";
+import { Layout } from "../components/Layout";
 import Providers from "./providers";
 
 const iosevka = localFont({
@@ -11,123 +11,123 @@ const iosevka = localFont({
   display: "swap",
   src: [
     {
-      path: "./_fonts/Iosevka-ExtraLight.woff2",
+      path: "../assets/fonts/Iosevka-ExtraLight.woff2",
       weight: "200",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtraLightItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtraLightItalic.woff2",
       weight: "200",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtraLightOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtraLightOblique.woff2",
       weight: "200",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-Light.woff2",
+      path: "../assets/fonts/Iosevka-Light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-LightItalic.woff2",
+      path: "../assets/fonts/Iosevka-LightItalic.woff2",
       weight: "300",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-LightOblique.woff2",
+      path: "../assets/fonts/Iosevka-LightOblique.woff2",
       weight: "300",
       style: "oblique",
     },
 
     {
-      path: "./_fonts/Iosevka-Regular.woff2",
+      path: "../assets/fonts/Iosevka-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-Italic.woff2",
+      path: "../assets/fonts/Iosevka-Italic.woff2",
       weight: "400",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-Oblique.woff2",
+      path: "../assets/fonts/Iosevka-Oblique.woff2",
       weight: "400",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-Medium.woff2",
+      path: "../assets/fonts/Iosevka-Medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-MediumItalic.woff2",
+      path: "../assets/fonts/Iosevka-MediumItalic.woff2",
       weight: "500",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-MediumOblique.woff2",
+      path: "../assets/fonts/Iosevka-MediumOblique.woff2",
       weight: "500",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-SemiBold.woff2",
+      path: "../assets/fonts/Iosevka-SemiBold.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-SemiBoldItalic.woff2",
+      path: "../assets/fonts/Iosevka-SemiBoldItalic.woff2",
       weight: "600",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-SemiBoldOblique.woff2",
+      path: "../assets/fonts/Iosevka-SemiBoldOblique.woff2",
       weight: "600",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-Bold.woff2",
+      path: "../assets/fonts/Iosevka-Bold.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-BoldItalic.woff2",
+      path: "../assets/fonts/Iosevka-BoldItalic.woff2",
       weight: "700",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-BoldOblique.woff2",
+      path: "../assets/fonts/Iosevka-BoldOblique.woff2",
       weight: "700",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-ExtraBold.woff2",
+      path: "../assets/fonts/Iosevka-ExtraBold.woff2",
       weight: "800",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtraBoldItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtraBoldItalic.woff2",
       weight: "800",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtraBoldOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtraBoldOblique.woff2",
       weight: "800",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-Heavy.woff2",
+      path: "../assets/fonts/Iosevka-Heavy.woff2",
       weight: "900",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-HeavyItalic.woff2",
+      path: "../assets/fonts/Iosevka-HeavyItalic.woff2",
       weight: "900",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-HeavyOblique.woff2",
+      path: "../assets/fonts/Iosevka-HeavyOblique.woff2",
       weight: "900",
       style: "oblique",
     },
@@ -139,123 +139,123 @@ const iosevkaExt = localFont({
   display: "swap",
   src: [
     {
-      path: "./_fonts/Iosevka-ExtendedExtraLight.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedExtraLight.woff2",
       weight: "200",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedExtraLightItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedExtraLightItalic.woff2",
       weight: "200",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedExtraLightOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedExtraLightOblique.woff2",
       weight: "200",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedLight.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedLight.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedLightItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedLightItalic.woff2",
       weight: "300",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedLightOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedLightOblique.woff2",
       weight: "300",
       style: "oblique",
     },
 
     {
-      path: "./_fonts/Iosevka-Extended.woff2",
+      path: "../assets/fonts/Iosevka-Extended.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedItalic.woff2",
       weight: "400",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedOblique.woff2",
       weight: "400",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedMedium.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedMedium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedMediumItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedMediumItalic.woff2",
       weight: "500",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedMediumOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedMediumOblique.woff2",
       weight: "500",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedSemiBold.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedSemiBold.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedSemiBoldItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedSemiBoldItalic.woff2",
       weight: "600",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedSemiBoldOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedSemiBoldOblique.woff2",
       weight: "600",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedBold.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedBold.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedBoldItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedBoldItalic.woff2",
       weight: "700",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedBoldOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedBoldOblique.woff2",
       weight: "700",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedExtraBold.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedExtraBold.woff2",
       weight: "800",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedExtraBoldItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedExtraBoldItalic.woff2",
       weight: "800",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedExtraBoldOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedExtraBoldOblique.woff2",
       weight: "800",
       style: "oblique",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedHeavy.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedHeavy.woff2",
       weight: "900",
       style: "normal",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedHeavyItalic.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedHeavyItalic.woff2",
       weight: "900",
       style: "italic",
     },
     {
-      path: "./_fonts/Iosevka-ExtendedHeavyOblique.woff2",
+      path: "../assets/fonts/Iosevka-ExtendedHeavyOblique.woff2",
       weight: "900",
       style: "oblique",
     },

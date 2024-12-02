@@ -1,5 +1,6 @@
-import { Experience } from "../_components/Experience";
-import data from "../_constants/data.json";
+import { Experience } from "@/components/Experience";
+import data from "@/constants/data.json";
+
 import styles from "./page.module.scss";
 
 export default function About() {

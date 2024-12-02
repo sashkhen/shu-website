@@ -2,7 +2,7 @@
 
 import { PropsWithChildren } from "react";
 
-import ThemeProvider, { ThemeProviderProps } from "./_contexts/ThemeProvider";
+import ThemeProvider, { ThemeProviderProps } from "@/contexts/ThemeProvider";
 
 const Providers: React.FC<
   PropsWithChildren & { theme?: ThemeProviderProps }

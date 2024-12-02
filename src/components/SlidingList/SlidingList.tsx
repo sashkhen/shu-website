@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 
-import useOnResize from "@/app/_hooks/useOnResize";
+import useOnResize from "@/hooks/useOnResize";
 
 import styles from "./SlidingList.module.scss";
 

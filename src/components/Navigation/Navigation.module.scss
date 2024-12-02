@@ -1,5 +1,5 @@
-@use "../../_styles/theme";
-@use "../../_styles/mixins";
+@use "../../styles/theme";
+@use "../../styles/mixins";
 
 .root {
   --color: var(--foreground);

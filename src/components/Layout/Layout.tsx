@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
-import ShuSVG from "@/app/_icons/ShuSVG";
+import ShuSVG from "@/icons/ShuSVG";
 
 import { Navigation } from "../Navigation";
 import styles from "./Layout.module.scss";

@@ -2,8 +2,8 @@ import {
     createContext, PropsWithChildren, useCallback, useContext, useEffect, useMemo, useState
 } from "react";
 
-import cookie from "@/app/_utils/cookie";
-import Storage from "@/app/_utils/Storage";
+import cookie from "@/utils/cookie";
+import Storage from "@/utils/Storage";
 
 export enum ThemeMode {
   Light = "light",
