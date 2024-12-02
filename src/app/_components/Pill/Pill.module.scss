@@ -1,0 +1,12 @@
+.root {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--foreground);
+  color: var(--background);
+  line-height: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

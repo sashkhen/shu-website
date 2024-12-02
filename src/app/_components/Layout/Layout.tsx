@@ -14,14 +14,15 @@ type BaseProps = Omit<
 const Layout: React.FC<BaseProps> = ({ children, className, ...props }) => {
   return (
     <div className={clsx(styles.root, className)} {...props}>
-      <header className={styles.header}>
-        <Link href="/" className={styles.logo}>
-          <ShuSVG />
-        </Link>
-        <Navigation />
+      <header className={styles.header} data-sticky="true">
+        <div className={clsx(styles.content, styles.navigation)}>
+          <Link href="/" className={styles.logo}>
+            <ShuSVG />
+          </Link>
+          <Navigation />
+        </div>
       </header>
-      <aside className={styles.aside} />
-      <main className={styles.main}>{children}</main>
+      <main className={clsx(styles.main, styles.content)}>{children}</main>
     </div>
   );
 };

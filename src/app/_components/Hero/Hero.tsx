@@ -1,8 +1,5 @@
 import clsx from "clsx";
 
-import DeveloperSVG from "@/app/_icons/DeveloperSVG";
-import ShuSVG from "@/app/_icons/ShuSVG";
-
 import styles from "./Hero.module.scss";
 
 type BaseProps = Omit<

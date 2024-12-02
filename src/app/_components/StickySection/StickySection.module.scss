@@ -1,0 +1,22 @@
+@use "../../_styles/mixins";
+
+.root {
+  --gap: 1rem;
+  --top: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+
+  @include mixins.tablet {
+    gap: var(--gap);
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.stickyEl {
+  @include mixins.tablet {
+    position: sticky;
+    top: var(--top);
+  }
+}

@@ -1,0 +1,88 @@
+@use "../../_styles/mixins";
+
+.root {
+  color: inherit;
+}
+
+.order {
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 1;
+
+  @include mixins.desktop {
+    font-size: 6rem;
+  }
+}
+
+.content {
+  padding: 1rem 0 4rem;
+  border-top: 4px solid var(--foreground);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "summary"
+    "description"
+    "techStack";
+
+  @include mixins.desktop {
+    gap: 2rem;
+    grid-template-columns: 18rem 1fr;
+    grid-template-areas:
+      "summary description"
+      "techStack techStack";
+  }
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.description {
+  grid-area: description;
+}
+
+.stack {
+  grid-area: techStack;
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.25rem;
+
+  @include mixins.tablet {
+    font-size: 1.5rem;
+  }
+
+  @include mixins.desktop {
+    font-size: 1.75rem;
+  }
+}
+
+.subtitle {
+  margin: 1rem 0 0.5rem;
+  opacity: 0.5;
+  font-style: oblique;
+  font-size: 1rem;
+
+  @include mixins.tablet {
+    font-size: 1.125rem;
+  }
+
+  @include mixins.desktop {
+    font-size: 1.25rem;
+  }
+}
+
+.duration {
+  opacity: 0.75;
+}
+
+.description {
+  line-height: 1.5;
+}
