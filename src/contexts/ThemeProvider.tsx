@@ -2,7 +2,6 @@ import {
     createContext, PropsWithChildren, useCallback, useContext, useEffect, useMemo, useState
 } from "react";
 
-import cookie from "@/utils/cookie";
 import Storage from "@/utils/Storage";
 
 export enum ThemeMode {
@@ -20,10 +19,6 @@ type ThemeContextType = {
   variant: ThemeVariant;
   setMode: (mode: ThemeMode) => void;
   setVariant: (variant: ThemeVariant) => void;
-};
-
-const initialState = {
-  variant: Math.random() > 0.5 ? ThemeVariant.Purple : ThemeVariant.Plain,
 };
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
@@ -60,7 +55,9 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
     prefersDarkServer(cookieThemeMode) ? ThemeMode.Dark : ThemeMode.Light
   );
 
-  const [variant, _setVariant] = useState<ThemeVariant>(initialState.variant);
+  const [variant, _setVariant] = useState<ThemeVariant>(
+    Math.random() > 0.5 ? ThemeVariant.Purple : ThemeVariant.Plain
+  );
   const [userPreference, setUserPreference] = useState(false);
 
   const setMode = useCallback(
@@ -87,13 +84,11 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
 
     if (_mode) {
       _setMode(_mode);
-      cookie.set("theme-mode", _mode);
     } else {
       const prefersDark = prefersDarkClient();
       const systemMode = prefersDark ? ThemeMode.Dark : ThemeMode.Light;
 
       _setMode(systemMode);
-      cookie.set("theme-mode", systemMode);
     }
 
     if (_variant) {
@@ -101,7 +96,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
     }
 
     setUserPreference(!!(_mode || _variant));
-  }, []);
+  }, [store]);
 
   useEffect(() => {
     document.documentElement.dataset.themeMode = mode;
