@@ -143,9 +143,9 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
-    // url: "https://example.com", // todo: update
     title: "Sasha Diachenko",
     description: "Front-end Web Developer",
+    // url: "https://example.com", // todo: update
     // siteName: "shu", // ???
     images: [
       {

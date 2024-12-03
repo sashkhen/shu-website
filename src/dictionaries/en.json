@@ -34,6 +34,11 @@
     "text": "I'd love to hear from you! Whether you're looking to collaborate on a project, need a dedicated developer for your team, or just want to discuss ideas, feel free to reach out.",
     "social": {
       "cv": "resume"
-    }
+    },
+    "emailText": "You can always reach me at",
+    "githubText": "I code on",
+    "codepenText": "I prototype on",
+    "cvText": "you can find my CV here",
+    "socialMediaText": "and I am usually on social media as"
   }
 }

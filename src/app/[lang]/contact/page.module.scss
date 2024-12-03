@@ -1,9 +1,44 @@
 @use "../../../styles/mixins";
 
 .root {
+  --color: var(--foreground);
+  --color-hover: hsl(
+    var(--foreground-h),
+    var(--foreground-s),
+    calc(var(--foreground-l) + var(--hover-offset))
+  );
+
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   text-align: center;
+
+  > *:nth-child(1) {
+    flex: 1 1 auto;
+  }
+
+  @include mixins.tablet {
+    gap: 2rem;
+  }
 
   section {
     margin: 2rem auto;
+  }
+
+  a,
+  span {
+    font-weight: 700;
+  }
+
+  a {
+    font-weight: 700;
+    transition: color 0.2s ease-out;
+
+    @include mixins.hover {
+      &:hover {
+        color: var(--color-hover);
+      }
+    }
   }
 }

@@ -26,19 +26,18 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  // if (
-  //   [
-  //     "/android-chrome-192x192.png",
-  //     "/android-chrome-512x512.png",
-  //     "/apple-touch-icon.png",
-  //     "/favicon-16x16.png",
-  //     "/favicon-32x32.png",
-  //     "/favicon.ico",
-  //     "/shu.svg",
-  //     "/site.webmanifest",
-  //   ].includes(pathname)
-  // )
-  //   return;
+  if (
+    [
+      "/android-chrome-192x192.png",
+      "/android-chrome-512x512.png",
+      "/apple-touch-icon.png",
+      "/favicon-16x16.png",
+      "/favicon-32x32.png",
+      "/shu.svg",
+      "/site.webmanifest",
+    ].includes(pathname)
+  )
+    return;
 
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
