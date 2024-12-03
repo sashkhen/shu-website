@@ -1,0 +1,28 @@
+@use "../../styles/mixins";
+
+.h1 {
+  margin: 0 auto 2rem;
+  font-weight: 700;
+  font-size: 4rem;
+
+  @include mixins.desktop {
+    font-size: 6rem;
+  }
+}
+
+.h2 {
+  margin: 2rem auto;
+  font-weight: 700;
+  font-size: 3rem;
+
+  @include mixins.desktop {
+    font-size: 4rem;
+  }
+}
+
+.p {
+  margin: 1rem auto;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75;
+}

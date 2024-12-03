@@ -1,57 +1,12 @@
 @use "../../styles/mixins";
 
 .root {
+  min-height: 100%;
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr;
   align-items: center;
   text-align: center;
-  min-height: 100%;
 }
 
-.title {
-  font-weight: 700;
-  font-size: 4rem;
-
-  @include mixins.desktop {
-    font-size: 6rem;
-  }
-}
-
-.subtitle {
-  margin: 2rem auto 3rem;
-  font-weight: 700;
-  font-size: 3rem;
-
-  @include mixins.desktop {
-    font-size: 4rem;
-  }
-}
-
-.description {
-  margin: 1rem auto 0;
-  max-width: 60rem;
-  font-size: 1.25rem;
-  line-height: 1.75;
-
-  @include mixins.desktop {
-    &:first-of-type {
-      font-size: 1.25rem;
-    }
-  }
-}
-
-.illustration {
-  position: relative;
-  width: 100%;
-  max-width: 12rem;
-  overflow: hidden;
-  margin: 0 auto;
-  text-align: center;
-
-  svg {
-    display: block;
-    width: 100%;
-    fill: var(--foreground);
-  }
+.text {
+  margin-top: 3rem;
 }

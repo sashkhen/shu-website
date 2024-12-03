@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import ShuSVG from "@/icons/ShuSVG";
 
-import { Navigation } from "../Navigation";
-import styles from "./Layout.module.scss";
+import { Navigation } from "../../components/Navigation";
+import styles from "./AppLayout.module.scss";
 
 type BaseProps = Omit<
   React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,

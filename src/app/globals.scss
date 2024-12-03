@@ -24,6 +24,8 @@
     var(--foreground-o, 1)
   );
 
+  --hover-offset: 15%;
+
   color-scheme: var(--color-scheme, light);
 
   &[data-theme-variant="purple"] {
@@ -44,6 +46,7 @@
   --foreground-h: var(--color-white-h);
   --foreground-s: var(--color-white-s);
   --foreground-l: var(--color-white-l);
+  --hover-offset: -10%;
 
   &[data-theme-variant="purple"] {
     --background-h: var(--color-purple-h);

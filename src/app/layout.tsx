@@ -3,8 +3,9 @@ import "./globals.scss";
 
 import localFont from "next/font/local";
 
-import { Layout } from "../components/Layout";
-import Providers from "./providers";
+import AppProviders from "@/contexts/AppProviders";
+
+import { AppLayout } from "../layouts/AppLayout";
 
 const iosevka = localFont({
   variable: "--font-iosevka",
@@ -134,134 +135,6 @@ const iosevka = localFont({
   ],
 });
 
-const iosevkaExt = localFont({
-  variable: "--font-iosevka-ext",
-  display: "swap",
-  src: [
-    {
-      path: "../assets/fonts/Iosevka-ExtendedExtraLight.woff2",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedExtraLightItalic.woff2",
-      weight: "200",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedExtraLightOblique.woff2",
-      weight: "200",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedLight.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedLightItalic.woff2",
-      weight: "300",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedLightOblique.woff2",
-      weight: "300",
-      style: "oblique",
-    },
-
-    {
-      path: "../assets/fonts/Iosevka-Extended.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedItalic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedOblique.woff2",
-      weight: "400",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedMedium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedMediumItalic.woff2",
-      weight: "500",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedMediumOblique.woff2",
-      weight: "500",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedSemiBold.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedSemiBoldItalic.woff2",
-      weight: "600",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedSemiBoldOblique.woff2",
-      weight: "600",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedBold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedBoldItalic.woff2",
-      weight: "700",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedBoldOblique.woff2",
-      weight: "700",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedExtraBold.woff2",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedExtraBoldItalic.woff2",
-      weight: "800",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedExtraBoldOblique.woff2",
-      weight: "800",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedHeavy.woff2",
-      weight: "900",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedHeavyItalic.woff2",
-      weight: "900",
-      style: "italic",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtendedHeavyOblique.woff2",
-      weight: "900",
-      style: "oblique",
-    },
-  ],
-});
-
 export const metadata: Metadata = {
   title: "Sasha Diachenko",
   description: "Front-end Web Developer",
@@ -271,7 +144,7 @@ export const metadata: Metadata = {
     // url: "https://example.com", // todo: update
     title: "Sasha Diachenko",
     description: "Front-end Web Developer",
-    siteName: "shu", // ???
+    // siteName: "shu", // ???
     images: [
       {
         url: "/shu.svg",
@@ -302,12 +175,12 @@ export const metadata: Metadata = {
       sizes: "16x16",
       type: "image/png",
     },
-    {
-      rel: "mask-icon",
-      url: "/shu.svg",
-      type: "image/svg+xml",
-      color: "#000",
-    },
+    // {
+    //   rel: "mask-icon",
+    //   url: "/shu.svg",
+    //   type: "image/svg+xml",
+    //   color: "#000",
+    // },
     {
       rel: "icon",
       url: "/shu.svg",
@@ -323,10 +196,10 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme-source="auto">
-      <body className={`${iosevka.variable} ${iosevkaExt.variable}`}>
-        <Providers>
-          <Layout>{children}</Layout>
-        </Providers>
+      <body className={`${iosevka.variable}`}>
+        <AppProviders>
+          <AppLayout>{children}</AppLayout>
+        </AppProviders>
       </body>
     </html>
   );

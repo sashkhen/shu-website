@@ -5,7 +5,10 @@
     "address": "Warsaw, Poland",
     "email": "sashkhen056@gmail.com",
     "linkedin": "https://www.linkedin.com/in/sasha-diachenko-63b26a77/",
-    "github": "sashkhen"
+    "github": "https://github.com/sashkhen/",
+    "cv": "https://sashkhen.github.io/shu-cv/",
+    "codepen": "https://codepen.io/sashkhen/",
+    "npm": "https://www.npmjs.com/~sashkhen/"
   },
   "skills": [
     "React",

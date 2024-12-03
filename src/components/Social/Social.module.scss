@@ -1,3 +1,40 @@
+@use "../../styles/mixins";
+
+// $github: #1f2328;
+// $linkedin: #0a66c2;
+// $npm: #cb3837;
+
 .root {
-  color: inherit;
+  --color: var(--foreground);
+  --color-hover: hsl(
+    var(--foreground-h),
+    var(--foreground-s),
+    calc(var(--foreground-l) + var(--hover-offset))
+  );
+
+  a {
+    padding: 0 1.5rem;
+    color: var(--color);
+    transition: color 0.2s ease-out;
+    font-weight: 500;
+    font-size: 1.5rem;
+
+    &::after {
+      content: "🡕";
+      display: inline-block;
+      padding: 0 0.25rem;
+      font-size: 1rem;
+      transition: transform 0.2s ease-out;
+    }
+
+    @include mixins.hover {
+      &:hover {
+        color: var(--color-hover);
+
+        &::after {
+          transform: translate(15%, -15%);
+        }
+      }
+    }
+  }
 }
