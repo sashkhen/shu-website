@@ -11,7 +11,7 @@ type BaseProps = Omit<
   "data-testid" | "ref"
 >;
 
-const Layout: React.FC<BaseProps> = ({ children, className, ...props }) => {
+const AppLayout: React.FC<BaseProps> = ({ children, className, ...props }) => {
   return (
     <div className={clsx(styles.root, className)} {...props}>
       <header className={styles.header} data-sticky="true">
@@ -27,4 +27,4 @@ const Layout: React.FC<BaseProps> = ({ children, className, ...props }) => {
   );
 };
 
-export default Layout;
+export default AppLayout;
