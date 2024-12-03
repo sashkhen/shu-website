@@ -14,6 +14,24 @@
   display: inline-block;
   width: var(--width);
   height: var(--height);
+
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    outline: none;
+  }
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      outline: none;
+    }
+  }
 }
 
 @include theme.darkMode {
@@ -21,12 +39,6 @@
     --color-inactive: var(--foreground);
     --color-active: var(--color-orange);
   }
-}
-
-.input {
-  opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 .slider {
