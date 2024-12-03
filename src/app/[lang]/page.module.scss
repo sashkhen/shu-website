@@ -6,11 +6,11 @@
   flex-direction: column;
   gap: 4rem;
 
-  > *:nth-child(1) {
-    flex: 1 1 auto;
-  }
-
   @include mixins.tablet {
     gap: 2rem;
   }
+}
+
+.hero {
+  flex: 1 1 auto;
 }

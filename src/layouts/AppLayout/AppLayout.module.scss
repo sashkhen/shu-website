@@ -7,6 +7,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 .content {
@@ -17,7 +19,6 @@
 }
 
 .header {
-  // @include mixins.tablet {
   &[data-sticky="true"] {
     z-index: 1;
     position: sticky;
@@ -29,7 +30,6 @@
       0.75
     );
   }
-  // }
 }
 
 .navigation {
