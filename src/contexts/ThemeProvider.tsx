@@ -14,6 +14,17 @@ export enum ThemeVariant {
   Purple = "purple",
 }
 
+const THEME_COLORS = {
+  [ThemeMode.Light]: {
+    [ThemeVariant.Plain]: "#d4d5d2",
+    [ThemeVariant.Purple]: "#e4d8da",
+  },
+  [ThemeMode.Dark]: {
+    [ThemeVariant.Plain]: "#262725",
+    [ThemeVariant.Purple]: "#4d40dd",
+  },
+};
+
 type ThemeContextType = {
   mode: ThemeMode;
   variant: ThemeVariant;
@@ -41,6 +52,13 @@ const prefersDarkClient = () => {
 
   return window?.matchMedia("(prefers-color-scheme: dark)").matches;
 };
+
+const updateAppThemeColor = (mode: ThemeMode, color: string) =>
+  document
+    .querySelector(
+      `meta[name="theme-color"][media="(prefers-color-scheme: ${mode})"]`
+    )
+    ?.setAttribute("content", color);
 
 export type ThemeProviderProps = PropsWithChildren & {
   mode?: ThemeMode;
@@ -105,6 +123,11 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   useEffect(() => {
     document.documentElement.dataset.themeVariant = variant;
   }, [variant]);
+
+  useEffect(() => {
+    updateAppThemeColor(ThemeMode.Light, THEME_COLORS[mode][variant]);
+    updateAppThemeColor(ThemeMode.Dark, THEME_COLORS[mode][variant]);
+  }, [mode, variant]);
 
   useEffect(() => {
     document.documentElement.dataset.themeSource = userPreference

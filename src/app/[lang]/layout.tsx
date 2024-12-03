@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.scss";
 
 import { i18n, Locale } from "i18n-config";
@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import AppProviders from "@/contexts/AppProviders";
 import { getDictionary } from "@/utils/get-dictionary";
 
+import data from "../../constants/data.json";
 import { AppLayout } from "../../layouts/AppLayout";
 
 const iosevka = localFont({
@@ -137,16 +138,29 @@ const iosevka = localFont({
   ],
 });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#d4d5d2" },
+    { media: "(prefers-color-scheme: dark)", color: "#262725" },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Sasha Diachenko",
-  description: "Front-end Web Developer",
-  manifest: "/site.webmanifest",
+  title: data.contact.username,
+  description: data.position,
+  applicationName: data.contact.username,
+  authors: [{ name: data.contact.email }],
+  // themeColor: [
+  //   { media: "(prefers-color-scheme: light)", color: "var(--background)" },
+  //   { media: "(prefers-color-scheme: dark)", color: "var(--background)" },
+  // ],
+  // colorScheme: "light dark",
   openGraph: {
     type: "website",
-    title: "Sasha Diachenko",
-    description: "Front-end Web Developer",
-    // url: "https://example.com", // todo: update
-    // siteName: "shu", // ???
+    title: data.name,
+    description: data.position,
+    url: data.contact.website,
+    siteName: data.contact.shortname,
     images: [
       {
         url: "/shu.svg",
@@ -155,11 +169,11 @@ export const metadata: Metadata = {
     ],
   },
   icons: [
-    // {
-    //   rel: "apple-touch-startup-image",
-    //   url: "/shu.svg",
-    //   type: "image/svg+xml",
-    // },
+    {
+      rel: "apple-touch-startup-image",
+      url: "/shu.svg",
+      type: "image/svg+xml",
+    },
     {
       rel: "apple-touch-icon",
       url: "/apple-touch-icon.png",
@@ -177,12 +191,6 @@ export const metadata: Metadata = {
       sizes: "16x16",
       type: "image/png",
     },
-    // {
-    //   rel: "mask-icon",
-    //   url: "/shu.svg",
-    //   type: "image/svg+xml",
-    //   color: "#000",
-    // },
     {
       rel: "icon",
       url: "/shu.svg",
