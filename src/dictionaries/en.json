@@ -1,0 +1,39 @@
+{
+  "layout": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Hey! I'm Sasha",
+      "subtitle": "Front-end Web Dev",
+      "text": "I'm a passionate React developer with a keen eye for crafting beautiful, intuitive, and responsive user interfaces. My focus is on delivering clean, maintainable code that ensures seamless functionality and a great user experience. Whether it's building from scratch or enhancing existing projects, I strive to deliver solutions that meet user and business needs."
+    },
+    "theme": {
+      "mode": "Dark Mode",
+      "variant": "Theme Variant"
+    }
+  },
+  "about": {
+    "title": "About me",
+    "text": "I enjoy <b>creating</b> visually appealing things, I focus on <b>problem solving</b>, I have solid <b>communication</b> and presentation skills, I value <b>dedication</b>",
+    "foreword": {
+      "title": "Let me start with...",
+      "text": "I've started tinkering with HTML/CSS at the end of 2015..."
+    },
+    "afterword": {
+      "title": "Next up...",
+      "text": "It's a pleasure and a privilege to work with people who are passionate about their work and enjoy figuring things out. I'm always open for a team where collaboration and creativity lead the way."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "text": "I'd love to hear from you! Whether you're looking to collaborate on a project, need a dedicated developer for your team, or just want to discuss ideas, feel free to reach out.",
+    "social": {
+      "cv": "resume"
+    }
+  }
+}

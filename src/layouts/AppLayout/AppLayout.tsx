@@ -2,6 +2,7 @@ import clsx from "clsx";
 import Link from "next/link";
 
 import ShuSVG from "@/icons/ShuSVG";
+import { Dictionary } from "@/types/i18n";
 
 import { Navigation } from "../../components/Navigation";
 import styles from "./AppLayout.module.scss";
@@ -11,7 +12,16 @@ type BaseProps = Omit<
   "data-testid" | "ref"
 >;
 
-const AppLayout: React.FC<BaseProps> = ({ children, className, ...props }) => {
+type AppLayoutProps = BaseProps & {
+  dictionary: Dictionary["layout"];
+};
+
+const AppLayout: React.FC<AppLayoutProps> = ({
+  children,
+  className,
+  dictionary,
+  ...props
+}) => {
   return (
     <div className={clsx(styles.root, className)} {...props}>
       <header className={styles.header} data-sticky="true">
@@ -19,7 +29,7 @@ const AppLayout: React.FC<BaseProps> = ({ children, className, ...props }) => {
           <Link href="/" className={styles.logo}>
             <ShuSVG />
           </Link>
-          <Navigation />
+          <Navigation dictionary={dictionary.navigation} />
         </div>
       </header>
       <main className={clsx(styles.main, styles.content)}>{children}</main>

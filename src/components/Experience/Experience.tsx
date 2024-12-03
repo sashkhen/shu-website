@@ -1,14 +1,13 @@
 import clsx from "clsx";
 import moment from "moment";
 
+import { DivProps } from "@/types/base";
+
 import { Pill } from "../Pill";
 import { StickySection } from "../StickySection";
 import styles from "./Experience.module.scss";
 
-type BaseProps = Omit<
-  React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-  "data-testid" | "ref"
->;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 type ExperienceProps = BaseProps & {
   order: React.ReactNode;

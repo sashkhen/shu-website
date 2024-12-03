@@ -1,14 +1,10 @@
 import clsx from "clsx";
 
+import { InputProps } from "@/types/base";
+
 import styles from "./Toggle.module.scss";
 
-type BaseProps = Omit<
-  React.DetailedHTMLProps<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
-  >,
-  "data-testid" | "ref"
->;
+type BaseProps = Omit<InputProps, "data-testid" | "ref">;
 
 export type ToggleProps = BaseProps & {};
 

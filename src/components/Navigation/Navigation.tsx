@@ -3,37 +3,50 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+
+import { DivProps } from "@/types/base";
+import { Dictionary } from "@/types/i18n";
 
 import { SlidingList } from "../SlidingList";
 import styles from "./Navigation.module.scss";
 
-type BaseProps = Omit<
-  React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-  "data-testid" | "ref"
->;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
-export type NavigationProps = BaseProps & {};
+export type NavigationProps = BaseProps & {
+  dictionary: Dictionary["layout"]["navigation"];
+};
 
-const LINKS = [
-  {
-    label: "Home",
+const LINKS: Record<string, { pathname: string }> = {
+  home: {
     pathname: "/",
   },
-  {
-    label: "About",
+  about: {
     pathname: "/about",
   },
-  {
-    label: "Contact",
+  contact: {
     pathname: "/contact",
   },
-];
+};
 
-const Navigation: React.FC<NavigationProps> = ({ className, ...props }) => {
+const Navigation: React.FC<NavigationProps> = ({
+  className,
+  dictionary,
+  ...props
+}) => {
   const pathname = usePathname();
   const activeRef = useRef(null);
   const [active, setActive] = useState<typeof activeRef.current>(null);
+  const links = useMemo(
+    () =>
+      Object.keys(LINKS).map((key) => {
+        return {
+          label: dictionary[key as keyof typeof dictionary],
+          ...LINKS[key],
+        };
+      }),
+    [dictionary]
+  );
 
   useEffect(() => {
     setActive(activeRef.current);
@@ -42,7 +55,7 @@ const Navigation: React.FC<NavigationProps> = ({ className, ...props }) => {
   return (
     <div className={clsx(styles.root, className)} {...props}>
       <SlidingList activeEl={active ?? undefined} className={styles.list}>
-        {LINKS.map((item) => {
+        {links.map((item) => {
           const active = pathname === item.pathname;
 
           return (

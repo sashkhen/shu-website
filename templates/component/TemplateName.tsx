@@ -1,11 +1,10 @@
 import clsx from "clsx";
 
+import { DivProps } from "@/types/base";
+
 import styles from "./TemplateName.module.scss";
 
-type BaseProps = Omit<
-  React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
-  "data-testid" | "ref"
->;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 export type TemplateNameProps = BaseProps & {};
 
