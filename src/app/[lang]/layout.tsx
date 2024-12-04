@@ -150,11 +150,6 @@ export const metadata: Metadata = {
   description: data.position,
   applicationName: data.contact.username,
   authors: [{ name: data.contact.email }],
-  // themeColor: [
-  //   { media: "(prefers-color-scheme: light)", color: "var(--background)" },
-  //   { media: "(prefers-color-scheme: dark)", color: "var(--background)" },
-  // ],
-  // colorScheme: "light dark",
   openGraph: {
     type: "website",
     title: data.name,
