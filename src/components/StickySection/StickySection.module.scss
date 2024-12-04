@@ -5,18 +5,23 @@
   --top: 0;
 
   display: grid;
-  grid-template-columns: 1fr;
   align-items: start;
+  grid-template-columns: auto 1fr;
+  gap: 0;
 
-  @include mixins.tablet {
+  @include mixins.desktop {
     gap: var(--gap);
-    grid-template-columns: auto 1fr;
   }
 }
 
 .stickyEl {
-  @include mixins.tablet {
-    position: sticky;
-    top: var(--top);
+  position: sticky;
+  top: var(--top);
+  width: 0;
+  opacity: 0.1;
+
+  @include mixins.desktop {
+    width: auto;
+    opacity: 1;
   }
 }

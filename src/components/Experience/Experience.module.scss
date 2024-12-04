@@ -1,12 +1,13 @@
 @use "../../styles/mixins";
 
 .root {
-  color: inherit;
+  --top: 6.5rem;
+  --gap: 3rem;
 }
 
 .order {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 12rem;
   line-height: 1;
 
   @include mixins.desktop {
@@ -18,7 +19,7 @@
   padding: 1rem 0 4rem;
   border-top: 4px solid var(--foreground);
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: 1fr;
   grid-template-areas:
     "summary"
@@ -26,7 +27,6 @@
     "techStack";
 
   @include mixins.desktop {
-    gap: 2rem;
     grid-template-columns: 18rem 1fr;
     grid-template-areas:
       "summary description"
@@ -40,6 +40,12 @@
 
 .description {
   grid-area: description;
+  font-size: 1.25rem;
+  line-height: 1.5;
+
+  @include mixins.desktop {
+    font-size: 1rem;
+  }
 }
 
 .stack {
@@ -81,8 +87,4 @@
 
 .duration {
   opacity: 0.75;
-}
-
-.description {
-  line-height: 1.5;
 }

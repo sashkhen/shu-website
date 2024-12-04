@@ -59,6 +59,7 @@ $elements-count: 100;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 @include theme.darkMode {

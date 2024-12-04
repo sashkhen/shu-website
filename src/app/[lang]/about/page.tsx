@@ -25,11 +25,7 @@ export default async function About(props: {
           </Typography.P>
         </TextContainer>
       </div>
-      <Experience
-        order={0}
-        className={styles.section}
-        title={dictionary.about.foreword.title}
-      >
+      <Experience order={0} title={dictionary.about.foreword.title}>
         <div
           dangerouslySetInnerHTML={{ __html: dictionary.about.foreword.text }}
         />
@@ -37,7 +33,6 @@ export default async function About(props: {
       {[...data.employment].reverse().map((experience, i) => (
         <Experience
           key={experience.startDate}
-          className={styles.section}
           order={i + 1}
           title={experience.position}
           subtitle={experience.company}
@@ -50,7 +45,6 @@ export default async function About(props: {
       ))}
       <Experience
         order={data.employment.length + 1}
-        className={styles.section}
         title={dictionary.about.afterword.title}
       >
         <div
