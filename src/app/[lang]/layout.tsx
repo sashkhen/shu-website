@@ -20,11 +20,6 @@ const iosevka = localFont({
       style: "normal",
     },
     {
-      path: "../../assets/fonts/Iosevka-ExtraLightItalic.woff2",
-      weight: "200",
-      style: "italic",
-    },
-    {
       path: "../../assets/fonts/Iosevka-ExtraLightOblique.woff2",
       weight: "200",
       style: "oblique",
@@ -33,11 +28,6 @@ const iosevka = localFont({
       path: "../../assets/fonts/Iosevka-Light.woff2",
       weight: "300",
       style: "normal",
-    },
-    {
-      path: "../../assets/fonts/Iosevka-LightItalic.woff2",
-      weight: "300",
-      style: "italic",
     },
     {
       path: "../../assets/fonts/Iosevka-LightOblique.woff2",
@@ -51,11 +41,6 @@ const iosevka = localFont({
       style: "normal",
     },
     {
-      path: "../../assets/fonts/Iosevka-Italic.woff2",
-      weight: "400",
-      style: "italic",
-    },
-    {
       path: "../../assets/fonts/Iosevka-Oblique.woff2",
       weight: "400",
       style: "oblique",
@@ -64,11 +49,6 @@ const iosevka = localFont({
       path: "../../assets/fonts/Iosevka-Medium.woff2",
       weight: "500",
       style: "normal",
-    },
-    {
-      path: "../../assets/fonts/Iosevka-MediumItalic.woff2",
-      weight: "500",
-      style: "italic",
     },
     {
       path: "../../assets/fonts/Iosevka-MediumOblique.woff2",
@@ -81,11 +61,6 @@ const iosevka = localFont({
       style: "normal",
     },
     {
-      path: "../../assets/fonts/Iosevka-SemiBoldItalic.woff2",
-      weight: "600",
-      style: "italic",
-    },
-    {
       path: "../../assets/fonts/Iosevka-SemiBoldOblique.woff2",
       weight: "600",
       style: "oblique",
@@ -94,11 +69,6 @@ const iosevka = localFont({
       path: "../../assets/fonts/Iosevka-Bold.woff2",
       weight: "700",
       style: "normal",
-    },
-    {
-      path: "../../assets/fonts/Iosevka-BoldItalic.woff2",
-      weight: "700",
-      style: "italic",
     },
     {
       path: "../../assets/fonts/Iosevka-BoldOblique.woff2",
@@ -111,11 +81,6 @@ const iosevka = localFont({
       style: "normal",
     },
     {
-      path: "../../assets/fonts/Iosevka-ExtraBoldItalic.woff2",
-      weight: "800",
-      style: "italic",
-    },
-    {
       path: "../../assets/fonts/Iosevka-ExtraBoldOblique.woff2",
       weight: "800",
       style: "oblique",
@@ -124,11 +89,6 @@ const iosevka = localFont({
       path: "../../assets/fonts/Iosevka-Heavy.woff2",
       weight: "900",
       style: "normal",
-    },
-    {
-      path: "../../assets/fonts/Iosevka-HeavyItalic.woff2",
-      weight: "900",
-      style: "italic",
     },
     {
       path: "../../assets/fonts/Iosevka-HeavyOblique.woff2",

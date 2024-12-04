@@ -56,7 +56,9 @@ const Navigation: React.FC<NavigationProps> = ({
     <div className={clsx(styles.root, className)} {...props}>
       <SlidingList activeEl={active ?? undefined} className={styles.list}>
         {links.map((item) => {
-          const active = pathname === item.pathname;
+          const active =
+            pathname.replace(new RegExp("^/[a-z]{2}(/|$)"), "/") ===
+            item.pathname;
 
           return (
             <Link
