@@ -129,6 +129,11 @@ export const metadata: Metadata = {
       sizes: "180x180",
     },
     {
+      rel: "apple-icon",
+      url: "/apple-icon.png",
+      sizes: "180x180",
+    },
+    {
       rel: "icon",
       url: "/favicon-32x32.png",
       sizes: "32x32",
