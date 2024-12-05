@@ -12,10 +12,8 @@
     "generate:page": "npx generate-react-cli component --type=page"
   },
   "dependencies": {
-    "@formatjs/intl-localematcher": "^0.5.8",
     "clsx": "^2.1.1",
     "lodash.debounce": "^4.0.8",
-    "negotiator": "^1.0.0",
     "next": "15.0.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -25,7 +23,6 @@
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.9",
-    "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
