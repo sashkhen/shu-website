@@ -3,6 +3,7 @@
   "shortName": "sashkhen",
   "description": "Front-end Web Dev",
   "url": "",
+  "sitemapUrl": "https://shu-website-ivory.vercel.app",
   "authors": [
     {
       "name": "Sasha Diachenko",
@@ -10,6 +11,7 @@
     }
   ],
   "keywords": "nextjs, react, website, pwa",
+  "generator": "Next.js",
   "theme": {
     "light": {
       "plain": "#d4d5d2",

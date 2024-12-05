@@ -103,6 +103,7 @@ export const metadata: Metadata = {
   applicationName: _metadata.shortName,
   description: _metadata.description,
   authors: _metadata.authors,
+  generator: _metadata.generator,
   openGraph: {
     type: "website",
     title: _metadata.title,

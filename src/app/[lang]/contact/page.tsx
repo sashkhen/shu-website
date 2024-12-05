@@ -1,12 +1,18 @@
 import { Locale } from "i18n-config";
+import { Metadata } from "next/types";
 
 import { Social } from "@/components/Social";
 import { TextContainer } from "@/components/TextContainer";
 import { Typography } from "@/components/Typography";
 import data from "@/constants/data.json";
+import _metadata from "@/constants/metadata.json";
 import { getDictionary } from "@/utils/get-dictionary";
 
 import styles from "./page.module.scss";
+
+export const metadata: Metadata = {
+  title: `Contact | ${_metadata.title}`,
+};
 
 export default async function Contact(props: {
   params: Promise<{ lang: Locale }>;
