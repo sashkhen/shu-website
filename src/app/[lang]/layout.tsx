@@ -7,7 +7,6 @@ import localFont from "next/font/local";
 import AppProviders from "@/contexts/AppProviders";
 import { getDictionary } from "@/utils/get-dictionary";
 
-import data from "../../constants/data.json";
 import { AppLayout } from "../../layouts/AppLayout";
 
 const iosevka = localFont({
@@ -99,16 +98,18 @@ const iosevka = localFont({
 });
 
 export const metadata: Metadata = {
-  title: data.contact.username,
-  description: data.position,
-  applicationName: data.contact.username,
-  authors: [{ name: data.contact.email }],
+  title: "Sasha Diachenko",
+  applicationName: "sashkhen",
+  description: "Front-end Web Dev",
+  authors: [
+    { name: "Sasha Diachenko", url: "https://shu-website-ivory.vercel.app/" },
+  ],
   openGraph: {
     type: "website",
-    title: data.name,
-    description: data.position,
-    url: data.contact.website,
-    siteName: data.contact.shortname,
+    title: "Sasha Diachenko",
+    siteName: "sashkhen",
+    description: "Front-end Web Dev",
+    url: "https://shu-website-ivory.vercel.app/",
     images: [
       {
         url: "/shu.svg",

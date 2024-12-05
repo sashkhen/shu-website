@@ -1,0 +1,12 @@
+{
+  "title": "Sasha Diachenko",
+  "applicationName": "sashkhen",
+  "description": "Front-end Web Dev",
+  "authors": [
+    {
+      "name": "Sasha Diachenko",
+      "url": "https://shu-website-ivory.vercel.app/"
+    }
+  ],
+  "keywords": "nextjs, react, website, pwa"
+}

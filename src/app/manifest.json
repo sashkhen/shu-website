@@ -1,7 +1,11 @@
 {
-  "name": "sashkhen",
+  "name": "Sasha Diachenko",
   "short_name": "sashkhen",
   "description": "Front-end Web Dev",
+  "developer": {
+    "name": "Sasha Diachenko",
+    "url": "https://shu-website-ivory.vercel.app/"
+  },
   "start_url": "/",
   "display": "standalone",
   "background_color": "#d4d5d2",
