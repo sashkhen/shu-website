@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import moment from "moment";
+import { FormattedDate } from "react-intl";
 
 import { DivProps } from "@/types/base";
 
@@ -17,9 +17,6 @@ type ExperienceProps = BaseProps & {
   endDate?: string;
   stack?: string[];
 };
-
-const beautify = (date: string) => moment(date).format("MMM YYYY");
-const getDiff = (a: string, b?: string) => moment(b).from(moment(a), true);
 
 const Experience: React.FC<ExperienceProps> = ({
   className,
@@ -44,12 +41,17 @@ const Experience: React.FC<ExperienceProps> = ({
           {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           {startDate && (
             <div className={styles.duration}>
-              <span className={styles.date}>{beautify(startDate)}</span>
+              <span className={styles.date}>
+                <FormattedDate value={startDate} year="numeric" />
+              </span>
               {" — "}
               <span className={styles.date}>
-                {endDate ? beautify(endDate) : "ongoing"}
+                {endDate ? (
+                  <FormattedDate value={endDate} year="numeric" />
+                ) : (
+                  "ongoing"
+                )}
               </span>
-              {` (${getDiff(startDate, endDate)})`}
             </div>
           )}
         </div>

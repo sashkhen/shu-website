@@ -75,10 +75,6 @@
   background-color: var(--color-active);
 }
 
-// .input:focus + .slider {
-//   box-shadow: 0 0 1px var(--color-active);
-// }
-
 .input:checked + .slider:before {
   transform: translateX(calc(var(--height) * (var(--ratio) - 1)));
 }

@@ -3,6 +3,8 @@
 .root {
   --top: 6.5rem;
   --gap: 3rem;
+
+  text-align: left;
 }
 
 .order {
@@ -17,7 +19,7 @@
 
 .content {
   padding: 1rem 0 4rem;
-  border-top: 4px solid var(--foreground);
+  border-top: 0.125rem solid var(--foreground);
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;

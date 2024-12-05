@@ -1,24 +1,15 @@
-import { Locale } from "i18n-config";
-
 import { Background } from "@/components/Background";
 import { Hero } from "@/components/Hero";
 import { ThemeConfigurator } from "@/components/ThemeConfigurator";
-import { getDictionary } from "@/utils/get-dictionary";
 
 import styles from "./page.module.scss";
 
-export default async function Home(props: {
-  params: Promise<{ lang: Locale }>;
-}) {
-  const { lang } = await props.params;
-
-  const dictionary = await getDictionary(lang);
-
+export default async function Home() {
   return (
     <div className={styles.root}>
       <Background className={styles.background} />
-      <Hero dictionary={dictionary.home.hero} className={styles.hero} />
-      <ThemeConfigurator dictionary={dictionary.home.theme} />
+      <Hero className={styles.hero} />
+      <ThemeConfigurator />
     </div>
   );
 }

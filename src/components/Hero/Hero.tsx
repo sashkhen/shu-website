@@ -1,7 +1,9 @@
+"use client";
+
 import clsx from "clsx";
+import { FormattedMessage } from "react-intl";
 
 import { DivProps } from "@/types/base";
-import { Dictionary } from "@/types/i18n";
 
 import { TextContainer } from "../TextContainer";
 import { Typography } from "../Typography";
@@ -9,18 +11,22 @@ import styles from "./Hero.module.scss";
 
 type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
-type HeroProps = BaseProps & {
-  dictionary: Dictionary["home"]["hero"];
-};
+type HeroProps = BaseProps & {};
 
-const Hero: React.FC<HeroProps> = ({ className, dictionary, ...props }) => {
+const Hero: React.FC<HeroProps> = ({ className, ...props }) => {
   return (
     <div className={clsx(styles.root, className)} {...props}>
       <div>
-        <Typography.H1>{dictionary.title}</Typography.H1>
-        <Typography.H2>{dictionary.subtitle}</Typography.H2>
+        <Typography.H1>
+          <FormattedMessage id="hero.title" />
+        </Typography.H1>
+        <Typography.H2>
+          <FormattedMessage id="hero.subtitle" />
+        </Typography.H2>
         <TextContainer className={styles.text}>
-          <Typography.P>{dictionary.text}</Typography.P>
+          <Typography.P>
+            <FormattedMessage id="hero.text" />
+          </Typography.P>
         </TextContainer>
       </div>
     </div>

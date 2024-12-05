@@ -3,15 +3,12 @@ import { useMemo } from "react";
 
 import data from "@/constants/data.json";
 import { DivProps } from "@/types/base";
-import { Dictionary } from "@/types/i18n";
 
 import styles from "./Social.module.scss";
 
 type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
-export type SocialProps = BaseProps & {
-  dictionary: Dictionary["contact"]["social"];
-};
+export type SocialProps = BaseProps & {};
 
 type SocialLink = {
   label: string;
@@ -28,7 +25,7 @@ const LINKS: Record<string, SocialLink> = {
     pathname: data.contact.linkedin,
   },
   cv: {
-    label: "cv",
+    label: "resume",
     pathname: data.contact.cv,
   },
   email: {
@@ -37,15 +34,9 @@ const LINKS: Record<string, SocialLink> = {
   },
 };
 
-const Social: React.FC<SocialProps> = ({ className, dictionary, ...props }) => {
+const Social: React.FC<SocialProps> = ({ className, ...props }) => {
   const links: SocialLink[] = useMemo(
-    () =>
-      Object.keys(LINKS).map((key) => {
-        return {
-          ...LINKS[key],
-          label: dictionary[key as keyof typeof dictionary] || LINKS[key].label,
-        };
-      }),
+    () => Object.keys(LINKS).map((key) => LINKS[key]),
     []
   );
   return (

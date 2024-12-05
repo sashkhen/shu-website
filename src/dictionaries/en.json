@@ -1,44 +1,39 @@
 {
-  "layout": {
-    "navigation": {
-      "home": "Home",
-      "about": "About",
-      "contact": "Contact"
-    }
-  },
-  "home": {
-    "hero": {
-      "title": "Hey! I'm Sasha",
-      "subtitle": "Front-end Web Dev",
-      "text": "I'm a passionate React developer with a keen eye for crafting beautiful, intuitive, and responsive user interfaces. My focus is on delivering clean, maintainable code that ensures seamless functionality and a great user experience. Whether it's building from scratch or enhancing existing projects, I strive to deliver solutions that meet user and business needs."
-    },
-    "theme": {
-      "mode": "Dark Mode",
-      "variant": "Theme Variant"
-    }
-  },
-  "about": {
-    "title": "About me",
-    "text": "I enjoy <b>creating</b> visually appealing things, I focus on <b>problem solving</b>, I have solid <b>communication</b> and presentation skills, I value <b>dedication</b>",
-    "foreword": {
-      "title": "Let me start with...",
-      "text": "I've started tinkering with HTML/CSS at the end of 2015..."
-    },
-    "afterword": {
-      "title": "Next up...",
-      "text": "It's a pleasure and a privilege to work with people who are passionate about their work and enjoy figuring things out. I'm always open for a team where collaboration and creativity lead the way."
-    }
-  },
-  "contact": {
-    "title": "Get in Touch",
-    "text": "I'd love to hear from you! Whether you're looking to collaborate on a project, need a dedicated developer for your team, or just want to discuss ideas, feel free to reach out.",
-    "social": {
-      "cv": "resume"
-    },
-    "emailText": "You can always reach me at",
-    "githubText": "I code on",
-    "codepenText": "I prototype on",
-    "cvText": "you can find my CV here",
-    "socialMediaText": "and I am usually on social media as"
-  }
+  "navLinks.home": "Home",
+  "navLinks.about": "About",
+  "navLinks.contact": "Contact",
+  "hero.title": "Hello! I'm Sasha",
+  "hero.subtitle": "Front-End Web Developer",
+  "hero.text": "I'm a passionate React developer with a keen eye for crafting beautiful, intuitive, and responsive user interfaces. My focus is on delivering clean, maintainable code that ensures seamless functionality and a great user experience. Whether it's building from scratch or enhancing existing projects, I strive to deliver solutions that meet user and business needs.",
+  "themeConfig.mode": "Dark Mode",
+  "themeConfig.variant": "Theme Variant",
+  "contact.title": "Get in Touch",
+  "contact.subtitle": "I'd love to hear from you! Whether you're looking to collaborate on a project, need a dedicated developer for your team, or just want to discuss ideas, feel free to reach out.",
+  "contact.text": "You can always reach me at {email}, I code on {github}, I prototype on {codepen}, you can find my {cv} here, and I am usually on social media as {username}",
+  "about.title": "About me",
+  "about.subtitle": "I enjoy <b>creating</b> visually appealing things, I focus on <b>problem solving</b>, I have solid <b>communication</b> and presentation skills, I value <b>dedication</b>",
+  "about.foreword.title": "Let me start with...",
+  "about.foreword.text": "I've started tinkering with HTML/CSS at the end of 2015...",
+  "about.afterword.title": "Next up...",
+  "about.afterword.text": "It's a pleasure and a privilege to work with people who are passionate about their work and enjoy figuring things out. I'm always open for a team where collaboration and creativity lead the way.",
+  "experiences.[0].description": "RV Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestias omnis adipisci tempore iure molestiae reiciendis neque, facere placeat doloribus tempora excepturi eos pariatur. Eius ratione dolorum fugit tempora neque possimus tempore dolorem temporibus sapiente distinctio aliquid maxime autem ipsa voluptatum molestiae quasi cupiditate, cumque amet impedit exercitationem, error cum, non itaque? Placeat amet similique perferendis, dolor aperiam a fugit architecto possimus quibusdam blanditiis nemo earum numquam. Officiis nesciunt incidunt beatae accusantium odit, dolores facilis, eaque qui repellat quidem ab fuga mollitia. Blanditiis a assumenda numquam nihil, similique voluptas. Recusandae laborum nostrum nesciunt, voluptates voluptatem consectetur quam tempora maxime officiis esse laboriosam possimus, porro architecto dignissimos ipsam sapiente sunt magni fuga at deleniti earum inventore. Aut, veniam repellendus repellat sapiente tempore cupiditate quo error porro, aspernatur, eligendi quidem sit ea totam saepe unde vel odit. Non, soluta itaque! Nam necessitatibus porro sunt repellat quaerat sapiente minima asperiores, consequatur et aperiam officia odit, unde dicta excepturi. Consequatur quaerat magni dolor laboriosam laudantium, cum voluptatem officia id nobis vero. Necessitatibus architecto autem eos, totam harum fuga magnam ab nihil quia. Repellat, dolor molestiae atque eum molestias maxime quaerat excepturi dolore alias, nam quisquam porro, temporibus placeat asperiores consequatur voluptatem deleniti ad ut.",
+  "experiences.[0].location": "remote",
+  "experiences.[0].responsibilities.[0]": "UI redesign and feature migration from platform v1 to v2",
+  "experiences.[0].responsibilities.[1]": "Working on new features (form/state heavy features, realtime messaging) and bugfixes, as well as maintaining storybook, unit tests, e2e tests",
+  "experiences.[0].responsibilities.[2]": "Working on refactoring of logic heavy parts of application",
+  "experiences.[1].description": "FinMix Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestias omnis adipisci tempore iure molestiae reiciendis neque, facere placeat doloribus tempora excepturi eos pariatur. Eius ratione dolorum fugit tempora neque possimus tempore dolorem temporibus sapiente distinctio aliquid maxime autem ipsa voluptatum molestiae quasi cupiditate, cumque amet impedit exercitationem, error cum, non itaque? Placeat amet similique perferendis, dolor aperiam a fugit architecto possimus quibusdam blanditiis nemo earum numquam. Officiis nesciunt incidunt beatae accusantium odit, dolores facilis, eaque qui repellat quidem ab fuga mollitia. Blanditiis a assumenda numquam nihil, similique voluptas. Recusandae laborum nostrum nesciunt, voluptates voluptatem consectetur quam tempora maxime officiis esse laboriosam possimus, porro architecto dignissimos ipsam sapiente sunt magni fuga at deleniti earum inventore. Aut, veniam repellendus repellat sapiente tempore cupiditate quo error porro, aspernatur, eligendi quidem sit ea totam saepe unde vel odit. Non, soluta itaque! Nam necessitatibus porro sunt repellat quaerat sapiente minima asperiores, consequatur et aperiam officia odit, unde dicta excepturi. Consequatur quaerat magni dolor laboriosam laudantium, cum voluptatem officia id nobis vero. Necessitatibus architecto autem eos, totam harum fuga magnam ab nihil quia. Repellat, dolor molestiae atque eum molestias maxime quaerat excepturi dolore alias, nam quisquam porro, temporibus placeat asperiores consequatur voluptatem deleniti ad ut.",
+  "experiences.[1].location": "remote",
+  "experiences.[1].responsibilities.[0]": "Building visually attractive (and reusable) components, interactions, animations for the best look and feel of the app",
+  "experiences.[1].responsibilities.[1]": "Maintaining codebase and app performance",
+  "experiences.[1].responsibilities.[2]": "Created a unified approach to handle different 3rd party libraries for web3 authentication using hooks",
+  "experiences.[1].responsibilities.[3]": "Built minimal image editor for creating NFTs/Ads based on AI-generated images",
+  "experiences.[2].description": "LC Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestias omnis adipisci tempore iure molestiae reiciendis neque, facere placeat doloribus tempora excepturi eos pariatur. Eius ratione dolorum fugit tempora neque possimus tempore dolorem temporibus sapiente distinctio aliquid maxime autem ipsa voluptatum molestiae quasi cupiditate, cumque amet impedit exercitationem, error cum, non itaque? Placeat amet similique perferendis, dolor aperiam a fugit architecto possimus quibusdam blanditiis nemo earum numquam. Officiis nesciunt incidunt beatae accusantium odit, dolores facilis, eaque qui repellat quidem ab fuga mollitia. Blanditiis a assumenda numquam nihil, similique voluptas. Recusandae laborum nostrum nesciunt, voluptates voluptatem consectetur quam tempora maxime officiis esse laboriosam possimus, porro architecto dignissimos ipsam sapiente sunt magni fuga at deleniti earum inventore. Aut, veniam repellendus repellat sapiente tempore cupiditate quo error porro, aspernatur, eligendi quidem sit ea totam saepe unde vel odit. Non, soluta itaque! Nam necessitatibus porro sunt repellat quaerat sapiente minima asperiores, consequatur et aperiam officia odit, unde dicta excepturi. Consequatur quaerat magni dolor laboriosam laudantium, cum voluptatem officia id nobis vero. Necessitatibus architecto autem eos, totam harum fuga magnam ab nihil quia. Repellat, dolor molestiae atque eum molestias maxime quaerat excepturi dolore alias, nam quisquam porro, temporibus placeat asperiores consequatur voluptatem deleniti ad ut.",
+  "experiences.[2].location": "remote",
+  "experiences.[2].responsibilities.[0]": "Implementing A/B tests on various optimization platforms",
+  "experiences.[2].responsibilities.[1]": "Developing ad-hoc product solutions",
+  "experiences.[2].responsibilities.[2]": "Improving internal processes - newcomer onboarding, client onboarding, development practices",
+  "experiences.[3].description": "Yalantis Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestias omnis adipisci tempore iure molestiae reiciendis neque, facere placeat doloribus tempora excepturi eos pariatur. Eius ratione dolorum fugit tempora neque possimus tempore dolorem temporibus sapiente distinctio aliquid maxime autem ipsa voluptatum molestiae quasi cupiditate, cumque amet impedit exercitationem, error cum, non itaque? Placeat amet similique perferendis, dolor aperiam a fugit architecto possimus quibusdam blanditiis nemo earum numquam. Officiis nesciunt incidunt beatae accusantium odit, dolores facilis, eaque qui repellat quidem ab fuga mollitia. Blanditiis a assumenda numquam nihil, similique voluptas. Recusandae laborum nostrum nesciunt, voluptates voluptatem consectetur quam tempora maxime officiis esse laboriosam possimus, porro architecto dignissimos ipsam sapiente sunt magni fuga at deleniti earum inventore. Aut, veniam repellendus repellat sapiente tempore cupiditate quo error porro, aspernatur, eligendi quidem sit ea totam saepe unde vel odit. Non, soluta itaque! Nam necessitatibus porro sunt repellat quaerat sapiente minima asperiores, consequatur et aperiam officia odit, unde dicta excepturi. Consequatur quaerat magni dolor laboriosam laudantium, cum voluptatem officia id nobis vero. Necessitatibus architecto autem eos, totam harum fuga magnam ab nihil quia. Repellat, dolor molestiae atque eum molestias maxime quaerat excepturi dolore alias, nam quisquam porro, temporibus placeat asperiores consequatur voluptatem deleniti ad ut.",
+  "experiences.[3].location": "Dnipro, Ukraine",
+  "experiences.[3].responsibilities.[0]": "Creating fully responsive, cross-browser compatible, usable web apps for both client and internal projects (React, HTML/CSS)",
+  "experiences.[3].responsibilities.[1]": "Collaborative work in cross-functional teams including PM, BI, designer, QA engineer, front- and back end developer roles, as well as collaborating with marketing/SEO team"
 }

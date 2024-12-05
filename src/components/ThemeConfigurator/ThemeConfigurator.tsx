@@ -1,31 +1,25 @@
 "use client";
 
 import clsx from "clsx";
+import { FormattedMessage } from "react-intl";
 
 import { ThemeMode, ThemeVariant, useTheme } from "@/contexts/ThemeProvider";
 import { DivProps } from "@/types/base";
-import { Dictionary } from "@/types/i18n";
 
 import { Toggle } from "../Toggle";
 import styles from "./ThemeConfigurator.module.scss";
 
 type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
-type ThemeProps = BaseProps & {
-  dictionary: Dictionary["home"]["theme"];
-};
+type ThemeProps = BaseProps & {};
 
-const ThemeConfigurator: React.FC<ThemeProps> = ({
-  className,
-  dictionary,
-  ...props
-}) => {
+const ThemeConfigurator: React.FC<ThemeProps> = ({ className, ...props }) => {
   const theme = useTheme();
 
   return (
     <div className={clsx(styles.root, className)} {...props}>
       <div className={styles.field}>
-        <span>{dictionary.mode}</span>
+        <FormattedMessage id="themeConfig.mode" />
         <Toggle
           id="theme-mode"
           name="theme-mode"
@@ -37,7 +31,7 @@ const ThemeConfigurator: React.FC<ThemeProps> = ({
         />
       </div>
       <div className={styles.field}>
-        <span>{dictionary.variant}</span>
+        <FormattedMessage id="themeConfig.variant" />
         <Toggle
           id="theme-variant"
           name="theme-variant"

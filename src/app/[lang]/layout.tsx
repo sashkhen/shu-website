@@ -161,14 +161,13 @@ export default async function RootLayout({
   params: Promise<{ lang: Locale }>;
 }>) {
   const { lang } = await params;
-
-  const dictionary = await getDictionary(lang);
+  const messages = await getDictionary(lang);
 
   return (
     <html lang={lang} data-theme-source="auto">
       <body className={`${iosevka.variable}`}>
-        <AppProviders>
-          <AppLayout dictionary={dictionary.layout}>{children}</AppLayout>
+        <AppProviders intl={{ locale: lang, messages: messages }}>
+          <AppLayout>{children}</AppLayout>
         </AppProviders>
       </body>
     </html>
