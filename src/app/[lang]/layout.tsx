@@ -4,6 +4,7 @@ import "./globals.scss";
 import { i18n, Locale } from "i18n-config";
 import localFont from "next/font/local";
 
+import _metadata from "@/constants/metadata.json";
 import AppProviders from "@/contexts/AppProviders";
 import { getDictionary } from "@/utils/get-dictionary";
 
@@ -98,18 +99,16 @@ const iosevka = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sasha Diachenko",
-  applicationName: "sashkhen",
-  description: "Front-end Web Dev",
-  authors: [
-    { name: "Sasha Diachenko", url: "https://shu-website-ivory.vercel.app/" },
-  ],
+  title: _metadata.title,
+  applicationName: _metadata.shortName,
+  description: _metadata.description,
+  authors: _metadata.authors,
   openGraph: {
     type: "website",
-    title: "Sasha Diachenko",
-    siteName: "sashkhen",
-    description: "Front-end Web Dev",
-    url: "https://shu-website-ivory.vercel.app/",
+    title: _metadata.title,
+    siteName: _metadata.shortName,
+    description: _metadata.description,
+    url: _metadata.url,
     images: [
       {
         url: "/shu.svg",

@@ -36,6 +36,7 @@ export function middleware(request: NextRequest) {
       "/shu.svg",
       "/site.webmanifest",
       "/manifest.json",
+      "/manifest.webmanifest",
     ].includes(pathname)
   )
     return;

@@ -1,12 +1,25 @@
 {
   "title": "Sasha Diachenko",
-  "applicationName": "sashkhen",
+  "shortName": "sashkhen",
   "description": "Front-end Web Dev",
+  "url": "",
   "authors": [
     {
       "name": "Sasha Diachenko",
-      "url": "https://shu-website-ivory.vercel.app/"
+      "url": ""
     }
   ],
-  "keywords": "nextjs, react, website, pwa"
+  "keywords": "nextjs, react, website, pwa",
+  "theme": {
+    "light": {
+      "plain": "#d4d5d2",
+      "purple": "#e4d8da"
+    },
+    "dark": {
+      "plain": "#262725",
+      "purple": "#4d40dd"
+    }
+  },
+  "themeColor": "#d4d5d2",
+  "backgroundColor": "#d4d5d2"
 }
