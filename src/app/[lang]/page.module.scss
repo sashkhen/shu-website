@@ -9,6 +9,10 @@
   @include mixins.tablet {
     gap: 2rem;
   }
+
+  > *:not(.background) {
+    position: relative;
+  }
 }
 
 .hero {

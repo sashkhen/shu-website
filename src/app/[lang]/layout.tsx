@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import "./globals.scss";
 
 import { i18n, Locale } from "i18n-config";
@@ -97,13 +97,6 @@ const iosevka = localFont({
     },
   ],
 });
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#d4d5d2" },
-    { media: "(prefers-color-scheme: dark)", color: "#262725" },
-  ],
-};
 
 export const metadata: Metadata = {
   title: data.contact.username,

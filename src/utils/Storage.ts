@@ -15,8 +15,6 @@ class Storage {
   }
 
   read(key: string) {
-    if (typeof window === "undefined") return null;
-
     try {
       const rawValue = window[this.storageType].getItem(
         `${this.storageKey}:${key}`
@@ -30,8 +28,6 @@ class Storage {
   }
 
   write(key: string, value: unknown) {
-    if (typeof window === "undefined") return;
-
     try {
       window[this.storageType].setItem(
         `${this.storageKey}:${key}`,
@@ -43,8 +39,6 @@ class Storage {
   }
 
   clear(key: string) {
-    if (typeof window === "undefined") return;
-
     try {
       window[this.storageType].removeItem(`${this.storageKey}:${key}`);
     } catch (err) {
@@ -54,7 +48,6 @@ class Storage {
 
   clearAll() {
     try {
-      // window[this.storageType].clear();
       Object.keys(window[this.storageType])
         .filter((key) =>
           new RegExp("^" + this.storageKey + ":.+", "gi").test(key)

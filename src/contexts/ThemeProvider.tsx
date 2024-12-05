@@ -1,7 +1,10 @@
+"use client";
+
 import {
-    createContext, PropsWithChildren, useCallback, useContext, useEffect, useMemo, useState
+    createContext, PropsWithChildren, useCallback, useContext, useEffect, useState
 } from "react";
 
+import Cookie from "@/utils/Cookie";
 import Storage from "@/utils/Storage";
 
 export enum ThemeMode {
@@ -42,9 +45,6 @@ export const useTheme = () => {
   return context;
 };
 
-const prefersDarkServer = (cookieMode?: ThemeMode) =>
-  cookieMode === ThemeMode.Dark;
-
 const prefersDarkClient = () => {
   if (typeof window === "undefined") {
     return null;
@@ -53,48 +53,52 @@ const prefersDarkClient = () => {
   return window?.matchMedia("(prefers-color-scheme: dark)").matches;
 };
 
-const updateAppThemeColor = (mode: ThemeMode, color: string) =>
-  document
-    .querySelector(
-      `meta[name="theme-color"][media="(prefers-color-scheme: ${mode})"]`
-    )
-    ?.setAttribute("content", color);
+const updateAppThemeColor = (color: string, mode?: ThemeMode) => {
+  const selector = [
+    "meta",
+    '[name="theme-color"]',
+    mode ? `[media="(prefers-color-scheme: ${mode})"]` : "",
+  ].join("");
+  let metaTag = document.querySelector(selector);
+
+  if (metaTag) {
+    metaTag.setAttribute("content", color);
+  } else {
+    metaTag = document.createElement("meta");
+    metaTag.setAttribute("name", "theme-color");
+    metaTag.setAttribute("content", color);
+
+    if (mode) {
+      metaTag.setAttribute("media", `(prefers-color-scheme: ${mode})`);
+    }
+
+    document.head.appendChild(metaTag);
+  }
+};
 
 export type ThemeProviderProps = PropsWithChildren & {
   mode?: ThemeMode;
 };
 
-const ThemeProvider: React.FC<ThemeProviderProps> = ({
-  children,
-  mode: cookieThemeMode,
-}) => {
-  const store = useMemo(() => new Storage("theme"), []);
-  const [mode, _setMode] = useState<ThemeMode>(
-    prefersDarkServer(cookieThemeMode) ? ThemeMode.Dark : ThemeMode.Light
-  );
+const store = new Storage("theme");
+const cookie = new Cookie("theme");
 
-  const [variant, _setVariant] = useState<ThemeVariant>(
-    Math.random() > 0.5 ? ThemeVariant.Purple : ThemeVariant.Plain
-  );
+const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+  const [mode, _setMode] = useState<ThemeMode>(ThemeMode.Light);
+  const [variant, _setVariant] = useState<ThemeVariant>(ThemeVariant.Plain);
   const [userPreference, setUserPreference] = useState(false);
 
-  const setMode = useCallback(
-    (mode: ThemeMode) => {
-      _setMode(mode);
-      store.write("mode", mode);
-      setUserPreference(true);
-    },
-    [store]
-  );
+  const setMode = useCallback((mode: ThemeMode) => {
+    _setMode(mode);
+    store.write("mode", mode);
+    setUserPreference(true);
+  }, []);
 
-  const setVariant = useCallback(
-    (variant: ThemeVariant) => {
-      _setVariant(variant);
-      store.write("variant", variant);
-      setUserPreference(true);
-    },
-    [store]
-  );
+  const setVariant = useCallback((variant: ThemeVariant) => {
+    _setVariant(variant);
+    store.write("variant", variant);
+    setUserPreference(true);
+  }, []);
 
   useEffect(() => {
     const _mode: ThemeMode = store.read("mode");
@@ -114,7 +118,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
     }
 
     setUserPreference(!!(_mode || _variant));
-  }, [store]);
+  }, []);
 
   useEffect(() => {
     document.documentElement.dataset.themeMode = mode;
@@ -125,8 +129,10 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({
   }, [variant]);
 
   useEffect(() => {
-    updateAppThemeColor(ThemeMode.Light, THEME_COLORS[mode][variant]);
-    updateAppThemeColor(ThemeMode.Dark, THEME_COLORS[mode][variant]);
+    const themeColor = THEME_COLORS[mode][variant];
+
+    updateAppThemeColor(themeColor);
+    cookie.set("color", themeColor);
   }, [mode, variant]);
 
   useEffect(() => {

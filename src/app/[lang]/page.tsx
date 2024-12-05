@@ -16,7 +16,7 @@ export default async function Home(props: {
 
   return (
     <div className={styles.root}>
-      <Background />
+      <Background className={styles.background} />
       <Hero dictionary={dictionary.home.hero} className={styles.hero} />
       <ThemeConfigurator dictionary={dictionary.home.theme} />
     </div>
