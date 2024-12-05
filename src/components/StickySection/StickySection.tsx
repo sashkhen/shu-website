@@ -1,10 +1,10 @@
 import clsx from "clsx";
 
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import styles from "./StickySection.module.scss";
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 type StickySectionProps = BaseProps & {
   stickyEl: React.ReactNode;

@@ -6,12 +6,12 @@ import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import { SlidingList } from "../SlidingList";
 import styles from "./Navigation.module.scss";
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 export type NavigationProps = BaseProps & {};
 

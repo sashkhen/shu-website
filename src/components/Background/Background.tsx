@@ -1,12 +1,12 @@
 import clsx from "clsx";
 
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import styles from "./Background.module.scss";
 
 const ELEMENTS_COUNT = 100;
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 type BackgroundProps = BaseProps & {};
 

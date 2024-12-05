@@ -1,12 +1,12 @@
 import clsx from "clsx";
 
-import { HeadingProps, PProps } from "@/types/base";
+import { BaseHeadingProps, BasePProps } from "@/types/base";
 
 import styles from "./Typography.module.scss";
 
-type HeadingBaseProps = Omit<HeadingProps, "data-testid" | "ref">;
+type HeadingBaseProps = Omit<BaseHeadingProps, "data-testid" | "ref">;
 
-type ParagraphBaseProps = Omit<PProps, "data-testid" | "ref">;
+type ParagraphBaseProps = Omit<BasePProps, "data-testid" | "ref">;
 
 const H1: React.FC<HeadingBaseProps> = ({ className, ...props }) => {
   return <h1 className={clsx(styles.h1, className)} {...props} />;

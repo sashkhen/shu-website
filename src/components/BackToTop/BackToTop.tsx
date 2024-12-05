@@ -1,17 +1,14 @@
 "use client";
 
 import clsx from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import useOnScroll from "@/hooks/useOnScroll";
-import { ButtonProps } from "@/types/base";
 
-import { Button } from "../Button";
+import { Button, ButtonProps } from "../Button";
 import styles from "./BackToTop.module.scss";
 
-type BaseProps = Omit<ButtonProps, "data-testid" | "ref">;
-
-export type BackToTopProps = BaseProps & {};
+export type BackToTopProps = ButtonProps & {};
 
 const BackToTop: React.FC<BackToTopProps> = ({
   className,
@@ -19,6 +16,10 @@ const BackToTop: React.FC<BackToTopProps> = ({
   ...props
 }) => {
   const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(!!window.scrollY);
+  }, []);
 
   useOnScroll(() => {
     setVisible(!!window.scrollY);
@@ -36,7 +37,7 @@ const BackToTop: React.FC<BackToTopProps> = ({
       }}
       {...props}
     >
-      ⭡
+      ☝️
     </Button>
   );
 };

@@ -1,10 +1,10 @@
 import clsx from "clsx";
 
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import styles from "./TextContainer.module.scss";
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 export type TextContainerProps = BaseProps & {};
 

@@ -9,7 +9,7 @@ export default async function Home() {
     <div className={styles.root}>
       <Background className={styles.background} />
       <Hero className={styles.hero} />
-      <ThemeConfigurator />
+      <ThemeConfigurator className={styles.themeConfig} />
     </div>
   );
 }

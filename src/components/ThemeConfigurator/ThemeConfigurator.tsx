@@ -4,12 +4,12 @@ import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
 
 import { ThemeMode, ThemeVariant, useTheme } from "@/contexts/ThemeProvider";
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import { Toggle } from "../Toggle";
 import styles from "./ThemeConfigurator.module.scss";
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 type ThemeProps = BaseProps & {};
 

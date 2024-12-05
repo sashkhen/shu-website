@@ -4,13 +4,13 @@ import clsx from "clsx";
 import { FormattedMessage } from "react-intl";
 
 import data from "@/constants/data.json";
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import { TextContainer } from "../TextContainer";
 import { Typography } from "../Typography";
 import styles from "./HeroContact.module.scss";
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 export type HeroContactProps = BaseProps & {};
 

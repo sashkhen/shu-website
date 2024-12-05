@@ -13,6 +13,12 @@
   > *:not(.background) {
     position: relative;
   }
+
+  .themeConfig {
+    @include mixins.mobile {
+      display: none;
+    }
+  }
 }
 
 .hero {

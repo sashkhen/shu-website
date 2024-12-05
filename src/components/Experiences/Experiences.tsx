@@ -4,12 +4,12 @@ import clsx from "clsx";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import data from "@/constants/data.json";
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import { Experience } from "../Experience";
 import styles from "./Experiences.module.scss";
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 export type ExperiencesProps = BaseProps & {};
 

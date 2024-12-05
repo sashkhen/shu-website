@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { ButtonProps as BaseButtonProps } from "@/types/base";
+import { BaseButtonProps } from "@/types/base";
 
 import styles from "./Button.module.scss";
 

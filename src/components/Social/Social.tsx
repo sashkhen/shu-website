@@ -2,12 +2,12 @@ import clsx from "clsx";
 import { useMemo } from "react";
 
 import data from "@/constants/data.json";
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import { Typography } from "../Typography";
 import styles from "./Social.module.scss";
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 export type SocialProps = BaseProps & {};
 

@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import React from "react";
 
-import { DivProps } from "@/types/base";
+import { BaseDivProps } from "@/types/base";
 
 import styles from "./Pill.module.scss";
 
-type BaseProps = Omit<DivProps, "data-testid" | "ref">;
+type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
 
 export type PillProps = BaseProps & {};
 

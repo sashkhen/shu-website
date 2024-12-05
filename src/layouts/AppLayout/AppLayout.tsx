@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import { BackToTop } from "@/components/BackToTop";
 import { Navigation } from "@/components/Navigation";
+import { ThemeModeButton } from "@/components/ThemeModeButton";
+import { ThemeVariantButton } from "@/components/ThemeVariantButton";
 import ShuSVG from "@/icons/ShuSVG";
 
 import styles from "./AppLayout.module.scss";
@@ -30,7 +32,11 @@ const AppLayout: React.FC<AppLayoutProps> = ({
         </div>
       </header>
       <main className={clsx(styles.main, styles.content)}>{children}</main>
-      <BackToTop className={styles.toTop} />
+      <div className={styles.actions}>
+        <BackToTop raised />
+        <ThemeModeButton raised />
+        <ThemeVariantButton raised />
+      </div>
     </div>
   );
 };
