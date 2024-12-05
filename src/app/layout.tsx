@@ -99,6 +99,7 @@ const iosevka = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(_metadata.sitemapUrl),
   title: _metadata.title,
   applicationName: _metadata.shortName,
   description: _metadata.description,
