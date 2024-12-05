@@ -1,0 +1,80 @@
+@use "../../styles/mixins";
+
+.root {
+  --btn-background: var(--foreground);
+  --btn-background-hover: hsla(
+    var(--foreground-h),
+    var(--foreground-s),
+    calc(var(--foreground-l) - 5%)
+  );
+  --btn-color: var(--background);
+  --btn-shadow: hsla(
+    var(--foreground-h),
+    var(--foreground-s),
+    var(--foreground-l),
+    0.3
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--btn-background);
+  background-color: var(--btn-background);
+  color: var(--btn-color);
+  transition: all 0.2s ease-out;
+
+  font-weight: 500;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  height: var(--size);
+  border-radius: calc(var(--size) / 2);
+  font-size: var(--font);
+
+  &[data-size="small"] {
+    --size: 2rem;
+    --font: 1rem;
+  }
+
+  &[data-size="medium"] {
+    --size: 3rem;
+    --font: 1.25rem;
+  }
+
+  &[data-size="large"] {
+    --size: 4rem;
+    --font: 1.75rem;
+  }
+
+  &[data-shape="round"] {
+    padding: 0 calc(var(--size) / 2);
+  }
+
+  &[data-shape="circle"] {
+    width: var(--size);
+    border-radius: 50%;
+  }
+
+  &[data-raised="true"] {
+    box-shadow: 0 0.125rem 0.5rem 0.125rem var(--btn-shadow);
+
+    @include mixins.hover {
+      &:hover {
+        box-shadow: none;
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  @include mixins.hover {
+    &:hover {
+      border-color: var(--btn-background-hover);
+      background-color: var(--btn-background-hover);
+    }
+  }
+}

@@ -17,3 +17,8 @@ export type PProps = React.DetailedHTMLProps<
   React.HTMLAttributes<HTMLParagraphElement>,
   HTMLParagraphElement
 >;
+
+export type ButtonProps = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>;

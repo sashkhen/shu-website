@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
+import { BackToTop } from "@/components/BackToTop";
 import { Navigation } from "@/components/Navigation";
 import ShuSVG from "@/icons/ShuSVG";
 
@@ -29,6 +30,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({
         </div>
       </header>
       <main className={clsx(styles.main, styles.content)}>{children}</main>
+      <BackToTop className={styles.toTop} />
     </div>
   );
 };
