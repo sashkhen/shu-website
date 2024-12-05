@@ -5,12 +5,6 @@
 // $npm: #cb3837;
 
 .root {
-  --color: var(--foreground);
-  --color-hover: hsl(
-    var(--foreground-h),
-    var(--foreground-s),
-    calc(var(--foreground-l) + var(--hover-offset))
-  );
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -23,10 +17,6 @@
 
   a {
     padding: 0 1.5rem;
-    color: var(--color);
-    transition: color 0.2s ease-out;
-    font-weight: 500;
-    font-size: 1.5rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -41,8 +31,6 @@
 
     @include mixins.hover {
       &:hover {
-        color: var(--color-hover);
-
         &::after {
           transform: translate(15%, -15%);
         }

@@ -1,14 +1,7 @@
-@use "../../styles/theme";
 @use "../../styles/mixins";
 
 .root {
   --space: 1.5rem;
-  --color: var(--foreground);
-  --color-hover: hsl(
-    var(--foreground-h),
-    var(--foreground-s),
-    calc(var(--foreground-l) + var(--hover-offset))
-  );
 
   display: flex;
   gap: 1rem;
@@ -26,23 +19,17 @@
   gap: var(--space);
 
   [data-role="slider"] {
-    border-bottom: 0.125rem solid var(--color);
+    border-bottom: 0.125rem solid var(--foreground);
   }
 }
 
 .item {
   position: relative;
   padding: 0.5rem 1rem;
-  transition: color 0.2s ease-out;
+  text-decoration: none;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1;
-
-  @include mixins.hover {
-    &:hover {
-      color: var(--color-hover);
-    }
-  }
 
   @include mixins.tablet {
     padding: 0.875rem 1.75rem;
@@ -53,7 +40,6 @@
     position: absolute;
     left: calc(var(--space) / 2 * -1);
     transform: translateX(-50%);
-    color: var(--color);
     opacity: 0.5;
   }
 }

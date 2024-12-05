@@ -47,7 +47,7 @@ const HeroContact: React.FC<HeroContactProps> = ({ className, ...props }) => {
                   codepen
                 </a>
               ),
-              username: <span key="username">@{data.contact.username}</span>,
+              username: <b key="username">@{data.contact.username}</b>,
               cv: (
                 <a key="cv" href={data.contact.cv} target="_blank">
                   resume

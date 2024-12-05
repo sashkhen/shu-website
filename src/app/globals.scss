@@ -1,4 +1,5 @@
 @use "../styles/theme";
+@use "../styles/mixins";
 
 :root {
   @include theme.colors;
@@ -95,6 +96,17 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: var(--foreground);
+  transition: color 0.2s ease-out;
+  font-weight: 500;
+
+  @include mixins.hover {
+    &:hover {
+      color: hsl(
+        var(--foreground-h),
+        var(--foreground-s),
+        calc(var(--foreground-l) + var(--hover-offset))
+      );
+    }
+  }
 }

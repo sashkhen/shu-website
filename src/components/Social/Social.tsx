@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import data from "@/constants/data.json";
 import { DivProps } from "@/types/base";
 
+import { Typography } from "../Typography";
 import styles from "./Social.module.scss";
 
 type BaseProps = Omit<DivProps, "data-testid" | "ref">;
@@ -40,13 +41,17 @@ const Social: React.FC<SocialProps> = ({ className, ...props }) => {
     []
   );
   return (
-    <div className={clsx(styles.root, className)} {...props}>
+    <Typography.P
+      className={clsx(styles.root, className)}
+      size="large"
+      {...props}
+    >
       {links.map((link) => (
         <a key={link.label} href={link.pathname} target="_blank">
           {link.label}
         </a>
       ))}
-    </div>
+    </Typography.P>
   );
 };
 
