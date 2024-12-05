@@ -91,6 +91,7 @@ $elements-count: 100;
 
   @keyframes dot-#{$i} {
     10% {
+      transform: scale(1);
       opacity: $opacity;
     }
 
@@ -115,6 +116,7 @@ $elements-count: 100;
     left: $left;
     width: $size;
     height: $size;
+    transform: scale(0);
     opacity: 0;
     animation: dot-#{$i} #{$duration}s ease-out infinite;
 
