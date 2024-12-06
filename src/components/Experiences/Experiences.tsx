@@ -35,7 +35,31 @@ const Experiences: React.FC<ExperiencesProps> = ({ className, ...props }) => {
             endDate={experience.endDate}
             stack={experience.techStack}
           >
-            <FormattedMessage id={`experiences.[${i}].description`} />
+            <FormattedMessage
+              id={`experiences.[${i}].description`}
+              values={{
+                b: (chunks: React.ReactNode[]) => (
+                  <b key={chunks.join()}>{chunks}</b>
+                ),
+                "line-through": (chunks: React.ReactNode[]) => (
+                  <span
+                    key={chunks.join()}
+                    style={{ textDecoration: "line-through" }}
+                  >
+                    {chunks}
+                  </span>
+                ),
+                lean: (
+                  <a
+                    key="lean"
+                    href="https://en.wikipedia.org/wiki/Lean_thinking"
+                    target="_blank"
+                  >
+                    lean
+                  </a>
+                ),
+              }}
+            />
           </Experience>
         ))
         .reverse()}

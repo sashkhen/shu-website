@@ -24,8 +24,10 @@ const HeroAbout: React.FC<HeroAboutProps> = ({ className, ...props }) => {
           <FormattedMessage
             id="about.subtitle"
             values={{
-              b: (chunks: React.ReactNode[]) => (
-                <strong key={chunks.join()}>{chunks}</strong>
+              emoji: (chunks: React.ReactNode[]) => (
+                <span key={chunks.join()} style={{ fontFamily: "system-ui" }}>
+                  {chunks}
+                </span>
               ),
             }}
           />

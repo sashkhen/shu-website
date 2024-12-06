@@ -110,7 +110,7 @@ export const metadata: Metadata = {
     title: _metadata.title,
     siteName: _metadata.shortName,
     description: _metadata.description,
-    url: process.env.NEXT_PUBLIC_BASE_URL,
+    url: new URL(process.env.NEXT_PUBLIC_BASE_URL),
     images: [
       {
         url: "/shu.svg",
