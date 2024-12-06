@@ -24,7 +24,7 @@
     &::after {
       content: "🡕";
       display: inline-block;
-      padding: 0 0.25rem;
+      margin-left: 0.25rem;
       font-size: 1rem;
       transition: transform 0.2s ease-out;
     }
@@ -32,7 +32,7 @@
     @include mixins.hover {
       &:hover {
         &::after {
-          transform: translate(15%, -15%);
+          transform: translate(0.25rem, -0.25rem);
         }
       }
     }
