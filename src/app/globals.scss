@@ -25,7 +25,7 @@
     var(--foreground-o, 1)
   );
 
-  --hover-offset: 15%;
+  --hover-offset: -10%;
 
   color-scheme: var(--color-scheme, light);
 
@@ -110,4 +110,22 @@ a {
       );
     }
   }
+}
+
+.emoji {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Ubuntu,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.mistake {
+  text-decoration: line-through;
+}
+
+code {
+  border-radius: 0.25rem;
+  background-color: hsl(
+    var(--background-h),
+    var(--background-s),
+    calc(var(--background-l) + 5%)
+  );
 }

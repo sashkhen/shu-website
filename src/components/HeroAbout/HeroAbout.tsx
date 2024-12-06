@@ -21,14 +21,7 @@ const HeroAbout: React.FC<HeroAboutProps> = ({ className, ...props }) => {
       </Typography.H2>
       <TextContainer>
         <Typography.P>
-          <FormattedMessage
-            id="about.subtitle"
-            values={{
-              b: (chunks: React.ReactNode[]) => (
-                <strong key={chunks.join()}>{chunks}</strong>
-              ),
-            }}
-          />
+          <FormattedMessage id="about.subtitle" />
         </Typography.P>
       </TextContainer>
     </div>

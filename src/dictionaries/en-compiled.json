@@ -1,0 +1,348 @@
+{
+  "about.afterword.text": [
+    {
+      "type": 0,
+      "value": "As I look ahead, I'm eager to continue working on impactful projects that allow me to leverage both my technical expertise and my ability to think creatively. I'm drawn to environments that foster collaboration, innovation, and the freedom to experiment. Whether it's tackling complex problems, working with emerging technologies, or joining teams with bold visions, I'm excited by the opportunity to keep learning and making a meaningful impact. Ultimately, I'm seeking roles where I can contribute to building products that make a difference, while being challenged to grow and adapt in new, exciting ways."
+    }
+  ],
+  "about.afterword.title": [
+    {
+      "type": 0,
+      "value": "Where I'm heading"
+    }
+  ],
+  "about.foreword.text": [
+    {
+      "type": 0,
+      "value": "I started tinkering with HTML and CSS at the end of 2015, marking my introduction to coding. I was immediately fascinated by the process and the ability to create something tangible from just lines of code. This excitement drove me to continue exploring web development, building small projects with JavaScript, jQuery, and AngularJS along the way."
+    }
+  ],
+  "about.foreword.title": [
+    {
+      "type": 0,
+      "value": "How it started"
+    }
+  ],
+  "about.subtitle": [
+    {
+      "type": 0,
+      "value": "I'm from Dnipro, Ukraine "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "🇺🇦"
+        }
+      ],
+      "type": 8,
+      "value": "emoji"
+    },
+    {
+      "type": 0,
+      "value": ". I am a movie geek and a proud owner of Dorka The Cat (who am I kidding, she just gracefully allows me to live with her). In my spare time I am sewing bags and chasing people to play memory game with me. I live in Warsaw, Poland "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "🇵🇱"
+        }
+      ],
+      "type": 8,
+      "value": "emoji"
+    },
+    {
+      "type": 0,
+      "value": ". And I hate tomatoes "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "🍅🙅‍♀️"
+        }
+      ],
+      "type": 8,
+      "value": "emoji"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "about.text": [
+    {
+      "type": 0,
+      "value": "My main tech stack consists of "
+    },
+    {
+      "type": 1,
+      "value": "primaryTechStack"
+    },
+    {
+      "type": 0,
+      "value": ". I've also worked with and am interested in "
+    },
+    {
+      "type": 1,
+      "value": "secondaryTechStack"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "about.title": [
+    {
+      "type": 0,
+      "value": "About me"
+    }
+  ],
+  "contact.subtitle": [
+    {
+      "type": 0,
+      "value": "I'd love to hear from you! Whether you're looking to collaborate on a project, need a dedicated developer for your team, or just want to discuss ideas, feel free to reach out."
+    }
+  ],
+  "contact.text": [
+    {
+      "type": 0,
+      "value": "You can always reach me at "
+    },
+    {
+      "type": 1,
+      "value": "email"
+    },
+    {
+      "type": 0,
+      "value": ", I code on "
+    },
+    {
+      "type": 1,
+      "value": "github"
+    },
+    {
+      "type": 0,
+      "value": ", I prototype on "
+    },
+    {
+      "type": 1,
+      "value": "codepen"
+    },
+    {
+      "type": 0,
+      "value": ", you can find my "
+    },
+    {
+      "type": 1,
+      "value": "cv"
+    },
+    {
+      "type": 0,
+      "value": " here, and I am usually on social media as "
+    },
+    {
+      "type": 1,
+      "value": "username"
+    },
+    {
+      "type": 0,
+      "value": "."
+    }
+  ],
+  "contact.title": [
+    {
+      "type": 0,
+      "value": "Get in Touch"
+    }
+  ],
+  "experience.finmix.description": [
+    {
+      "type": 0,
+      "value": "I had the opportunity to join a small, dynamic US-based team of passionate developers building a FinTech platform focused on blockchain and NFTs. Despite the fast pace and ever-changing market, they remained driven by their vision and commitment to pushing boundaries. The projects we worked on allowed me to execute precisely on a clearly defined scope of features, and also, when requirements were more vague, exercise my own judgment to deliver working prototypes. This balance was only possible because of the clear communication around what was important and the trust in my professional ability to make decisions on the rest. It was a challenging yet rewarding experience that taught me to be adaptable and proactive while working alongside an incredibly dedicated and talented team."
+    }
+  ],
+  "experience.finmix.project": [
+    {
+      "type": 0,
+      "value": "What made this experience so valuable was the high-energy, flexible environment that encouraged rapid decision-making and innovation. The team was focused on achieving results quickly and efficiently, adapting to new challenges without getting bogged down by established norms. Clear communication and trust in each other's expertise created a sense of ownership and autonomy, allowing me to make impactful decisions. It was an environment where growth and creativity thrived, driven by the need to stay agile and find the best solutions in a fast-paced setting. Working alongside such a driven and skilled team not only enhanced my technical abilities but also reinforced the importance of flexibility, problem-solving, and collaboration."
+    }
+  ],
+  "experience.finmix.title": [
+    {
+      "type": 0,
+      "value": "Most rewarding job"
+    }
+  ],
+  "experience.lc.description": [
+    {
+      "type": 0,
+      "value": "In order to challenge myself, I joined a UK-based optimization startup, which marked many firsts for me: my first international team, first fully remote team (before it became mainstream), and my first experience with a "
+    },
+    {
+      "type": 1,
+      "value": "lean"
+    },
+    {
+      "type": 0,
+      "value": " team. Here, I learned to focus on "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "what"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " needs to be done and "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "how"
+        }
+      ],
+      "type": 8,
+      "value": "b"
+    },
+    {
+      "type": 0,
+      "value": " to achieve it in the best possible way. I also learned not to be intimidated by anything JavaScript. I worked on fast-paced MVPs built with ES5, jQuery, Google Docs API, Firebase, "
+    },
+    {
+      "children": [
+        {
+          "type": 0,
+          "value": "and hacking Angular"
+        }
+      ],
+      "type": 8,
+      "value": "mistake"
+    },
+    {
+      "type": 0,
+      "value": ", as well as long-term projects using React, Vue, ES6, AWS, CI/CD, and more."
+    }
+  ],
+  "experience.lc.project": [
+    {
+      "type": 0,
+      "value": "My favorite ever project was a Black Friday promo banner campaign for a retail client. The challenge was to ensure seamless execution across multiple time zones, with different marketing teams managing the campaign in each region. The solution needed to be implemented and delivered quickly, be accessible to non-technical personnel, and require minimal technical support from developers. We built a promo banner using HTML, CSS, and JS, then injected it into each website via Google Tag Manager, allowing each marketing team to enable or disable it instantly. The banner automatically adjusted based on real-time user progress data (Front-end) and fetched promo type, conditions, and styling customizations from an AWS database (Back-end), which was updated through a Google Spreadsheet (Content Management System). This allowed the distributed teams to manage the campaign independently and timely, reducing errors and enabling smooth execution."
+    }
+  ],
+  "experience.lc.title": [
+    {
+      "type": 0,
+      "value": "My most unusual job"
+    }
+  ],
+  "experience.rv2.description": [
+    {
+      "type": 0,
+      "value": "My next freelancing project took me to a US-based product company, where I joined a well-established team amid a major platform redesign and migration to version 2.0. At first, my focus was on migrating the UI kit and collaborating closely with the design and project management teams to ensure a seamless transition. As the project evolved, I took on a broader range of responsibilities, from developing new features to troubleshooting bugs, while also ensuring the overall quality and maintainability through unit and end-to-end testing. It was a rewarding experience to work in such a structured, process-driven environment, where every task was approached with precision, and the focus was always on delivering high-quality results."
+    }
+  ],
+  "experience.rv2.project": [
+    {
+      "type": 0,
+      "value": "Working with a well-established brand and loyal user base offered great advantages. The strong foundation made decision-making smoother, and it was rewarding to see how our work impacted real users. With a trusted product, the focus was on maintaining high standards while continuously improving, ensuring reliability for a growing audience."
+    }
+  ],
+  "experience.rv2.title": [
+    {
+      "type": 0,
+      "value": "Most holistic project"
+    }
+  ],
+  "experience.yalantis.description": [
+    {
+      "type": 0,
+      "value": "I started my career as an HTML/CSS developer, working on internal projects within a Back-end team at an outsourcing company. I quickly moved on to client projects, learned React, and joined a major Healthcare platform project, which became my primary focus for the next two years. This experience taught me the importance of code quality and team collaboration. I explored technologies like Ruby on Rails and Vue, and developed a deep appreciation for good design. But what stood out most was the incredible team of talented, passionate individuals who showed me what it means to truly love your work."
+    }
+  ],
+  "experience.yalantis.project": [
+    {
+      "type": 0,
+      "value": "The standout project during my career here was a Healthcare platform designed to connect health practitioners (and their teams) with patients (and their families). Core features included real-time messaging, file sharing, social groups and feed, survey system, and advanced profile management. The two main challenges of the project were creating a UI that was intuitive and user-friendly, while also figuring out how to build it efficiently."
+    }
+  ],
+  "experience.yalantis.title": [
+    {
+      "type": 0,
+      "value": "My first job"
+    }
+  ],
+  "home.subtitle": [
+    {
+      "type": 0,
+      "value": "I'm a Front-End Web Developer"
+    }
+  ],
+  "home.text": [
+    {
+      "type": 0,
+      "value": "I enjoy crafting beautiful, intuitive, and fast user interfaces. My focus is on delivering clean, maintainable code that ensures seamless functionality and a great user experience. Whether it's building from scratch or enhancing existing projects, I strive to deliver solutions that meet user and business needs."
+    }
+  ],
+  "home.title": [
+    {
+      "type": 0,
+      "value": "Hello! My name is Sasha"
+    }
+  ],
+  "navLinks.about": [
+    {
+      "type": 0,
+      "value": "About"
+    }
+  ],
+  "navLinks.contact": [
+    {
+      "type": 0,
+      "value": "Contact"
+    }
+  ],
+  "navLinks.home": [
+    {
+      "type": 0,
+      "value": "Home"
+    }
+  ],
+  "notFound.back": [
+    {
+      "type": 0,
+      "value": "Return Home"
+    }
+  ],
+  "notFound.text": [
+    {
+      "type": 0,
+      "value": "Page not found"
+    }
+  ],
+  "notFound.title": [
+    {
+      "type": 0,
+      "value": "404"
+    }
+  ],
+  "themeConfig.mode": [
+    {
+      "type": 0,
+      "value": "Dark Mode"
+    }
+  ],
+  "themeConfig.variant": [
+    {
+      "type": 0,
+      "value": "Theme Variant"
+    }
+  ]
+}

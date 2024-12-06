@@ -23,12 +23,15 @@
     "CSS in JS",
     "CSS modules"
   ],
+  "primaryTechStack": ["React", "TypeScript", "NextJS", "GraphQL"],
+  "secondaryTechStack": ["NodeJS", "React Native", "WebSockets", "Web3"],
   "languages": [
     { "name": "English", "icon": "🇬🇧" },
     { "name": "Ukrainian", "icon": "🇺🇦" }
   ],
-  "employment": [
-    {
+  "notableProjects": ["yalantis", "lc", "finmix", "rv2"],
+  "employment": {
+    "rv2": {
       "position": "Front-End Web Developer (NextJS)",
       "company": "Freelance Project (EdTech)",
       "location": "remote",
@@ -51,7 +54,7 @@
         "Microsoft Azure"
       ]
     },
-    {
+    "finmix": {
       "position": "Front-End Developer (React/React Native)",
       "company": "Freelance Project (FinTech)",
       "location": "remote",
@@ -77,7 +80,7 @@
         "Docker"
       ]
     },
-    {
+    "lc": {
       "position": "Technical Consultant",
       "company": "LeanConvert",
       "location": "remote",
@@ -104,7 +107,7 @@
         "Sentry"
       ]
     },
-    {
+    "yalantis": {
       "position": "Front-End Web Developer (React)",
       "company": "Yalantis",
       "location": "Dnipro, Ukraine",
@@ -120,12 +123,15 @@
         "Redux Saga",
         "CSS Modules",
         "Material UI",
-        "Intl",
+        "Bulma",
+        "ReactIntl",
         "Webpack",
-        "SocketIO"
+        "SocketIO",
+        "React Virtualized",
+        "ScrollMagic"
       ]
     }
-  ],
+  },
   "education": [
     {
       "specialization": "Management",
@@ -135,6 +141,5 @@
       "endDate": "2013-06-01",
       "location": "Dnipro, Ukraine"
     }
-  ],
-  "footnote": "I enjoy <b>creating</b> visually appealing things, I focus on <b>problem solving</b>, I have solid <b>communication</b> and presentation skills, I value <b>dedication</b>."
+  ]
 }
