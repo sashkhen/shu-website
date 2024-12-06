@@ -1,4 +1,5 @@
 @use "../../styles/mixins";
+@use "../../styles/theme";
 
 .root {
   --btn-background: var(--foreground);
@@ -8,11 +9,12 @@
     calc(var(--foreground-l) - 5%)
   );
   --btn-color: var(--background);
+  --btn-shadow-o: 0.3;
   --btn-shadow: hsla(
     var(--foreground-h),
     var(--foreground-s),
     var(--foreground-l),
-    0.3
+    var(--btn-shadow-o)
   );
 
   display: flex;
@@ -76,5 +78,11 @@
       border-color: var(--btn-background-hover);
       background-color: var(--btn-background-hover);
     }
+  }
+}
+
+@include theme.darkMode {
+  .root {
+    --btn-shadow-o: 0.1;
   }
 }
