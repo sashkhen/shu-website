@@ -99,7 +99,7 @@ const iosevka = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(_metadata.sitemapUrl),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
   title: _metadata.title,
   applicationName: _metadata.shortName,
   description: _metadata.description,
@@ -110,7 +110,7 @@ export const metadata: Metadata = {
     title: _metadata.title,
     siteName: _metadata.shortName,
     description: _metadata.description,
-    url: _metadata.url,
+    url: process.env.NEXT_PUBLIC_BASE_URL,
     images: [
       {
         url: "/shu.svg",

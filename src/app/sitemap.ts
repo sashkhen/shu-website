@@ -1,22 +1,21 @@
 import type { MetadataRoute } from "next";
-import _metadata from "@/constants/metadata.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: `${_metadata.sitemapUrl}`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 1,
     },
     {
-      url: `${_metadata.sitemapUrl}/about`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${_metadata.sitemapUrl}/contact`,
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}/contact`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,

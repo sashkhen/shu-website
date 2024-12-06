@@ -35,7 +35,6 @@ const Experiences: React.FC<ExperiencesProps> = ({ className, ...props }) => {
             endDate={experience.endDate}
             stack={experience.techStack}
           >
-            <p>{`server: ${process.env.ENV_VARIABLE}, client: ${process.env.NEXT_PUBLIC_ENV_VARIABLE}`}</p>
             <FormattedMessage id={`experiences.[${i}].description`} />
           </Experience>
         ))
