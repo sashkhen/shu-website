@@ -22,7 +22,7 @@
 }
 
 .content {
-  padding: 1rem 0;
+  padding: 1rem 0 3rem;
   border-top: 0.125rem solid var(--foreground);
   display: grid;
   gap: 2rem;
@@ -50,11 +50,11 @@
 
 .description {
   grid-area: description;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.5;
 
-  @include mixins.desktop {
-    font-size: 1rem;
+  p + p {
+    margin-top: 1rem;
   }
 }
 

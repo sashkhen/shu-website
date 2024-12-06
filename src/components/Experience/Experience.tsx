@@ -56,13 +56,15 @@ const Experience: React.FC<ExperienceProps> = ({
           )}
         </div>
         <div className={styles.description}>{children}</div>
-        <ul className={styles.stack}>
-          {stack?.map((item) => (
-            <li key={item}>
-              <Pill>{item}</Pill>
-            </li>
-          ))}
-        </ul>
+        {stack?.length ? (
+          <ul className={styles.stack}>
+            {stack?.map((item) => (
+              <li key={item}>
+                <Pill>{item}</Pill>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
     </StickySection>
   );

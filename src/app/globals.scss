@@ -111,3 +111,21 @@ a {
     }
   }
 }
+
+.emoji {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Ubuntu,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.mistake {
+  text-decoration: line-through;
+}
+
+code {
+  border-radius: 0.25rem;
+  background-color: hsl(
+    var(--background-h),
+    var(--background-s),
+    calc(var(--background-l) + 5%)
+  );
+}

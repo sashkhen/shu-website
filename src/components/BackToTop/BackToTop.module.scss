@@ -1,6 +1,4 @@
 .root {
-  transition: opacity 0.2s ease-out;
-
   &[data-visible="false"] {
     opacity: 0;
     pointer-events: none;

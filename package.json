@@ -3,13 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run compile:en && next dev",
+    "build": "npm run compile:en && next build",
     "start": "next start",
     "lint": "next lint",
     "generate": "npx generate-react-cli",
     "generate:component": "npx generate-react-cli component",
-    "generate:page": "npx generate-react-cli component --type=page"
+    "generate:page": "npx generate-react-cli component --type=page",
+    "extract": "formatjs extract",
+    "extract:en": "npm run extract -- './src/**/*.ts(x)*' --ignore='**/*.d.ts' --out-file ./src/dictionaries/en-extracted.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --remove-default-message",
+    "compile": "formatjs compile",
+    "compile:en": "npm run compile -- ./src/dictionaries/en.json --ast --out-file ./src/dictionaries/en-compiled.json"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -22,6 +26,7 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
+    "@formatjs/cli": "^6.3.11",
     "@types/lodash.debounce": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^18",

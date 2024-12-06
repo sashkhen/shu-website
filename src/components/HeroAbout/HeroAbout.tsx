@@ -21,16 +21,7 @@ const HeroAbout: React.FC<HeroAboutProps> = ({ className, ...props }) => {
       </Typography.H2>
       <TextContainer>
         <Typography.P>
-          <FormattedMessage
-            id="about.subtitle"
-            values={{
-              emoji: (chunks: React.ReactNode[]) => (
-                <span key={chunks.join()} style={{ fontFamily: "system-ui" }}>
-                  {chunks}
-                </span>
-              ),
-            }}
-          />
+          <FormattedMessage id="about.subtitle" />
         </Typography.P>
       </TextContainer>
     </div>
