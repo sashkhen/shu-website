@@ -15,11 +15,7 @@
   max-width: 70rem;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 2rem 4rem;
-
-  @include mixins.tablet {
-    padding: 2rem;
-  }
+  padding: 2rem;
 }
 
 .header {
@@ -70,5 +66,10 @@
 }
 
 .main {
+  padding-bottom: 4rem;
   text-align: center;
+
+  @include mixins.tablet {
+    padding-bottom: 2rem;
+  }
 }

@@ -1,10 +1,14 @@
 @use "../../styles/mixins";
 
 .root {
-  --top: 6.5rem;
+  --top: 6.25rem;
   --gap: 3rem;
 
   text-align: left;
+
+  @include mixins.tablet {
+    --top: 7rem;
+  }
 }
 
 .order {
