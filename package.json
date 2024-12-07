@@ -17,6 +17,9 @@
     "compile:all": "formatjs compile-folder --ast ./src/dictionaries/ ./src/dictionaries-compiled/"
   },
   "dependencies": {
+    "@next/third-parties": "^15.0.4",
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "clsx": "^2.1.1",
     "lodash.debounce": "^4.0.8",
     "next": "15.0.3",

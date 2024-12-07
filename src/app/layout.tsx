@@ -7,6 +7,9 @@ import localFont from "next/font/local";
 import _metadata from "@/constants/metadata.json";
 import AppProviders from "@/contexts/AppProviders";
 import { getDictionary } from "@/utils/get-dictionary";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { AppLayout } from "../layouts/AppLayout";
 
@@ -168,6 +171,9 @@ export default async function RootLayout({
         <AppProviders intl={{ locale: lang, messages: messages }}>
           <AppLayout>{children}</AppLayout>
         </AppProviders>
+        <SpeedInsights />
+        <Analytics />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
     </html>
   );
