@@ -2,11 +2,22 @@
   margin: 0;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  background-color: var(--foreground);
-  color: var(--background);
+  border-width: 1px;
+  border-style: solid;
+
   line-height: 1;
 
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  &[data-variant="solid"] {
+    border-color: var(--foreground);
+    background-color: var(--foreground);
+    color: var(--background);
+  }
+
+  &[data-variant="outline"] {
+    border-color: var(--foreground);
+  }
 }
