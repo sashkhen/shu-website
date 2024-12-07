@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run compile:en && next dev",
-    "build": "npm run compile:en && next build",
+    "dev": "npm run compile:all && next dev",
+    "build": "npm run compile:all && next build",
     "start": "next start",
     "lint": "next lint",
     "generate": "npx generate-react-cli",
@@ -13,7 +13,7 @@
     "extract": "formatjs extract",
     "extract:en": "npm run extract -- './src/**/*.ts(x)*' --ignore='**/*.d.ts' --out-file ./src/dictionaries/en-extracted.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --remove-default-message",
     "compile": "formatjs compile",
-    "compile:en": "npm run compile -- ./src/dictionaries/en.json --ast --out-file ./src/dictionaries-compiled/en-compiled.json",
+    "compile:en": "npm run compile -- ./src/dictionaries/en.json --ast --out-file ./src/dictionaries-compiled/en.json",
     "compile:all": "formatjs compile-folder --ast ./src/dictionaries/ ./src/dictionaries-compiled/"
   },
   "dependencies": {
