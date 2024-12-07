@@ -1,11 +1,10 @@
 import clsx from "clsx";
 import React from "react";
-
-import { BaseDivProps } from "@/types/base";
+import { DivProps } from "react-html-props";
 
 import styles from "./Pill.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 export type PillProps = BaseProps & {
   variant?: "solid" | "outline";

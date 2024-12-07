@@ -1,16 +1,16 @@
 "use client";
 
 import clsx from "clsx";
+import { DivProps } from "react-html-props";
 import { FormattedMessage } from "react-intl";
 
 import data from "@/constants/data.json";
-import { BaseDivProps } from "@/types/base";
 
 import { TextContainer } from "../TextContainer";
 import { Typography } from "../Typography";
 import styles from "./HeroContact.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 export type HeroContactProps = BaseProps & {};
 

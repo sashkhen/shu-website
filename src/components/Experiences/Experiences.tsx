@@ -2,15 +2,15 @@
 
 import clsx from "clsx";
 import { useMemo } from "react";
+import { DivProps } from "react-html-props";
 import { FormattedMessage, useIntl } from "react-intl";
 
 import data from "@/constants/data.json";
-import { BaseDivProps } from "@/types/base";
 
 import { Experience } from "../Experience";
 import styles from "./Experiences.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 export type ExperiencesProps = BaseProps & {};
 

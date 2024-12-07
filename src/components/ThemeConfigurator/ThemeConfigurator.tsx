@@ -1,15 +1,15 @@
 "use client";
 
 import clsx from "clsx";
+import { DivProps } from "react-html-props";
 import { FormattedMessage } from "react-intl";
 
 import { ThemeMode, ThemeVariant, useTheme } from "@/contexts/ThemeProvider";
-import { BaseDivProps } from "@/types/base";
 
 import { Toggle } from "../Toggle";
 import styles from "./ThemeConfigurator.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 type ThemeProps = BaseProps & {};
 

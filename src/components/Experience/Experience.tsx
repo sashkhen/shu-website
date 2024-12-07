@@ -1,13 +1,12 @@
 import clsx from "clsx";
+import { DivProps } from "react-html-props";
 import { FormattedDate } from "react-intl";
-
-import { BaseDivProps } from "@/types/base";
 
 import { Pill } from "../Pill";
 import { StickySection } from "../StickySection";
 import styles from "./Experience.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 type ExperienceProps = BaseProps & {
   order: React.ReactNode;

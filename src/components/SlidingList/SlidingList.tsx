@@ -2,13 +2,13 @@
 
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
+import { DivProps } from "react-html-props";
 
 import useOnResize from "@/hooks/useOnResize";
-import { BaseDivProps } from "@/types/base";
 
 import styles from "./SlidingList.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 export type SlidingListProps = BaseProps & {
   activeEl?: HTMLElement;

@@ -1,12 +1,11 @@
 import clsx from "clsx";
-
-import { BaseDivProps } from "@/types/base";
+import { DivProps } from "react-html-props";
 
 import styles from "./Background.module.scss";
 
 const ELEMENTS_COUNT = 100;
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 type BackgroundProps = BaseProps & {};
 

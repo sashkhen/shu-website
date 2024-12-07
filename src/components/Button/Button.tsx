@@ -1,10 +1,9 @@
 import clsx from "clsx";
-
-import { BaseButtonProps } from "@/types/base";
+import { ButtonProps as ButtonHTMLProps } from "react-html-props";
 
 import styles from "./Button.module.scss";
 
-type BaseProps = Omit<BaseButtonProps, "data-testid" | "ref">;
+type BaseProps = Omit<ButtonHTMLProps, "data-testid" | "ref">;
 
 export type ButtonProps = BaseProps & {
   size?: "small" | "medium" | "large";
