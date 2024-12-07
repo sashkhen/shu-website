@@ -85,7 +85,7 @@ const cookie = new Cookie("theme");
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [mode, _setMode] = useState<ThemeMode>(ThemeMode.Light);
-  const [variant, _setVariant] = useState<ThemeVariant>(ThemeVariant.Plain);
+  const [variant, _setVariant] = useState<ThemeVariant>(ThemeVariant.Purple);
   const [userPreference, setUserPreference] = useState(false);
 
   const setMode = useCallback((mode: ThemeMode) => {
