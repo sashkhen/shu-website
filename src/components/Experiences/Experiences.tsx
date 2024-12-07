@@ -63,7 +63,7 @@ const Experiences: React.FC<ExperiencesProps> = ({ className, ...props }) => {
               ),
             }}
           />
-          <FormattedMessage id={`experience.${key}.project`} tagName={"p"} />
+          {/* <FormattedMessage id={`experience.${key}.project`} tagName={"p"} /> */}
         </Experience>
       ))}
       <Experience
