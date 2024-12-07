@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import _metadata from "@/constants/metadata.json";
 import AppProviders from "@/contexts/AppProviders";
 import { getDictionary } from "@/utils/get-dictionary";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { AppLayout } from "../layouts/AppLayout";
@@ -170,6 +171,7 @@ export default async function RootLayout({
           <AppLayout>{children}</AppLayout>
         </AppProviders>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
