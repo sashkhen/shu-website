@@ -1,3 +1,9 @@
+# Personal website
+
+- 4 theme combinations - 2 variants x 2 modes (light/dark)
+- responsive
+- PWA
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -19,6 +25,36 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Contributing
+
+### Components
+
+This project utilizes [`generate-react-cli`](https://github.com/arminbro/generate-react-cli) for bootstrapping components.
+
+To generate new component, run:
+
+```bash
+npm run generate:component Button
+```
+
+### UI Data
+
+In order to update static data that appears in UI please update `./src/constants/data.json`. For localization, please see [Localization](##Localization).
+
+In order to update metadata used in `<head>` and `manifest.json`, please update `./src/constants/metadata.json`.
+
+### Localization
+
+This project utilizes [`react-intl`](https://formatjs.github.io/docs/react-intl/) for managing translations.
+
+In order to add dictionary:
+
+- add `./src/dictionaries/[lang].json` file
+- run `npm run compile:all` to pre-compile your messages for performance
+- add pre-compiled dictionary to `./src/utils/get-dictionary.ts`
+
+Pre-compile command will run every time you start dev server (once) or build app.
 
 ## Learn More
 

@@ -1,17 +1,27 @@
 import clsx from "clsx";
 import React from "react";
-
-import { BaseDivProps } from "@/types/base";
+import { DivProps } from "react-html-props";
 
 import styles from "./Pill.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
-export type PillProps = BaseProps & {};
+export type PillProps = BaseProps & {
+  variant?: "solid" | "outline";
+};
 
-const Pill: React.FC<PillProps> = ({ children, className, ...props }) => {
+const Pill: React.FC<PillProps> = ({
+  variant = "outline",
+  children,
+  className,
+  ...props
+}) => {
   return (
-    <div className={clsx(styles.root, className)} {...props}>
+    <div
+      className={clsx(styles.root, className)}
+      data-variant={variant}
+      {...props}
+    >
       {children}
     </div>
   );

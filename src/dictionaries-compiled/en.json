@@ -246,7 +246,7 @@
   "experience.rv2.description": [
     {
       "type": 0,
-      "value": "My next freelancing project took me to a US-based product company, where I joined a well-established team amid a major platform redesign and migration to version 2.0. At first, my focus was on migrating the UI kit and collaborating closely with the design and project management teams to ensure a seamless transition. As the project evolved, I took on a broader range of responsibilities, from developing new features to troubleshooting bugs, while also ensuring the overall quality and maintainability through unit and end-to-end testing. It was a rewarding experience to work in such a structured, process-driven environment, where every task was approached with precision, and the focus was always on delivering high-quality results."
+      "value": "My next freelancing project took me to a US-based product company, where I joined a well-established team amid a major platform redesign and migration to version 2.0. At first, my focus was on migrating the UI kit and collaborating closely with the design and project management teams to ensure a seamless transition. As the project evolved, I took on a broader range of responsibilities, from developing new features and troubleshooting bugs to addressing technical debt and contributing to refactoring efforts, all while ensuring code quality through unit and end-to-end testing. It was a rewarding experience to work in such a structured, process-driven environment, where every task was approached with precision, and the focus was always on delivering high-quality results."
     }
   ],
   "experience.rv2.project": [

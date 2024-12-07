@@ -21,18 +21,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &::after {
-      content: "🡕";
-      display: inline-block;
-      margin-left: 0.25rem;
-      font-size: 1rem;
-      transition: transform 0.2s ease-out;
-    }
-
     @include mixins.hover {
+      text-decoration: none;
+
+      &::after {
+        content: "🡒";
+        display: inline-block;
+        margin-left: 0.25rem;
+        transition: transform 0.2s ease-out;
+      }
+
       &:hover {
         &::after {
-          transform: translate(0.25rem, -0.25rem);
+          transform: translate(0.5rem, 0);
         }
       }
     }

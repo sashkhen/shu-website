@@ -4,14 +4,13 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { DivProps } from "react-html-props";
 import { FormattedMessage } from "react-intl";
-
-import { BaseDivProps } from "@/types/base";
 
 import { SlidingList } from "../SlidingList";
 import styles from "./Navigation.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 export type NavigationProps = BaseProps & {};
 

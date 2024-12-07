@@ -1,15 +1,14 @@
 "use client";
 
 import clsx from "clsx";
+import { DivProps } from "react-html-props";
 import { FormattedMessage } from "react-intl";
-
-import { BaseDivProps } from "@/types/base";
 
 import { TextContainer } from "../TextContainer";
 import { Typography } from "../Typography";
 import styles from "./Hero.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 type HeroProps = BaseProps & {};
 

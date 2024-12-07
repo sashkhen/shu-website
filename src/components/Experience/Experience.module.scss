@@ -22,7 +22,7 @@
 }
 
 .content {
-  padding: 1rem 0 3rem;
+  padding: 1rem 0 2rem;
   border-top: 0.125rem solid var(--foreground);
   display: grid;
   gap: 2rem;
@@ -32,12 +32,8 @@
     "description"
     "techStack";
 
-  &:not(:last-child) {
-    padding-bottom: 4rem;
-  }
-
   @include mixins.desktop {
-    grid-template-columns: 18rem 1fr;
+    grid-template-columns: 20rem 1fr;
     grid-template-areas:
       "summary description"
       "techStack techStack";

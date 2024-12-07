@@ -2,15 +2,14 @@
 
 import clsx from "clsx";
 import Link from "next/link";
+import { DivProps } from "react-html-props";
 import { FormattedMessage } from "react-intl";
-
-import { BaseDivProps } from "@/types/base";
 
 import { TextContainer } from "../TextContainer";
 import { Typography } from "../Typography";
 import styles from "./NotFound.module.scss";
 
-type BaseProps = Omit<BaseDivProps, "data-testid" | "ref">;
+type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 
 export type NotFoundProps = BaseProps & {};
 

@@ -13,7 +13,8 @@
     "extract": "formatjs extract",
     "extract:en": "npm run extract -- './src/**/*.ts(x)*' --ignore='**/*.d.ts' --out-file ./src/dictionaries/en-extracted.json --id-interpolation-pattern '[sha512:contenthash:base64:6]' --remove-default-message",
     "compile": "formatjs compile",
-    "compile:en": "npm run compile -- ./src/dictionaries/en.json --ast --out-file ./src/dictionaries/en-compiled.json"
+    "compile:en": "npm run compile -- ./src/dictionaries/en.json --ast --out-file ./src/dictionaries-compiled/en-compiled.json",
+    "compile:all": "formatjs compile-folder --ast ./src/dictionaries/ ./src/dictionaries-compiled/"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -34,6 +35,7 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "generate-react-cli": "^8.4.9",
+    "react-html-props": "^2.0.9",
     "sass": "^1.81.0",
     "typescript": "^5"
   }
