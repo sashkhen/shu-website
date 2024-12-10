@@ -1,17 +1,14 @@
-import {
-  DEFAULT_THEME_MODE,
-  DEFAULT_THEME_VARIANT,
-  THEME_COLORS,
-} from "./theme";
+import data from "./data.json";
+import { DEFAULT_THEME_MODE, DEFAULT_THEME_VARIANT, THEME_COLORS } from "./theme";
 
 export const METADATA = {
-  title: "Sasha Diachenko",
-  shortName: "sashkhen",
-  description: "Front-end Web Dev",
+  title: data.name,
+  shortName: data.contact.username,
+  description: data.position,
   authors: [
     {
-      name: "Sasha Diachenko",
-      url: "",
+      name: data.name,
+      url: data.contact.website,
     },
   ],
   keywords: "nextjs, react, website, pwa",

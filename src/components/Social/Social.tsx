@@ -1,8 +1,10 @@
+"use client";
 import clsx from "clsx";
 import { useMemo } from "react";
 import { DivProps } from "react-html-props";
 
 import data from "@/constants/data.json";
+import useEmailLink from "@/hooks/useEmailLink";
 
 import { Typography } from "../Typography";
 import styles from "./Social.module.scss";
@@ -29,16 +31,16 @@ const LINKS: Record<string, SocialLink> = {
     label: "resume",
     pathname: data.contact.cv,
   },
-  email: {
-    label: "email",
-    pathname: `mailto:${data.contact.email}`,
-  },
 };
 
 const Social: React.FC<SocialProps> = ({ className, ...props }) => {
+  const emailLink = useEmailLink(data.contact.email);
   const links: SocialLink[] = useMemo(
-    () => Object.keys(LINKS).map((key) => LINKS[key]),
-    []
+    () =>
+      Object.keys(LINKS)
+        .map((key) => LINKS[key])
+        .concat({ label: "email", pathname: emailLink }),
+    [emailLink]
   );
   return (
     <Typography.P

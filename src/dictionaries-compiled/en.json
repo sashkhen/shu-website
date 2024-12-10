@@ -157,6 +157,18 @@
       "value": "Get in Touch"
     }
   ],
+  "email.body": [
+    {
+      "type": 0,
+      "value": "Hi Sasha,\n\nI came across your website and wanted to reach out.\n\nI would love to discuss how we could collaborate or explore potential opportunities to work together. Here's a bit about my project/idea:\n[Describe your project or idea here]\n\nLooking forward to hearing from you!\n\nBest regards,\n[Your Name]"
+    }
+  ],
+  "email.subject": [
+    {
+      "type": 0,
+      "value": "Let's Collaborate!"
+    }
+  ],
   "experience.finmix.description": [
     {
       "type": 0,

@@ -5,6 +5,7 @@ import { DivProps } from "react-html-props";
 import { FormattedMessage } from "react-intl";
 
 import data from "@/constants/data.json";
+import useEmailLink from "@/hooks/useEmailLink";
 
 import { TextContainer } from "../TextContainer";
 import { Typography } from "../Typography";
@@ -15,6 +16,8 @@ type BaseProps = Omit<DivProps, "data-testid" | "ref">;
 export type HeroContactProps = BaseProps & {};
 
 const HeroContact: React.FC<HeroContactProps> = ({ className, ...props }) => {
+  const emailLink = useEmailLink(data.contact.email);
+
   return (
     <div className={clsx(styles.root, className)} {...props}>
       <Typography.H2>
@@ -29,11 +32,7 @@ const HeroContact: React.FC<HeroContactProps> = ({ className, ...props }) => {
             id="contact.text"
             values={{
               email: (
-                <a
-                  key="email"
-                  href={`mailto:${data.contact.email}`}
-                  target="_blank"
-                >
+                <a key="email" href={emailLink} target="_blank">
                   {data.contact.email}
                 </a>
               ),
