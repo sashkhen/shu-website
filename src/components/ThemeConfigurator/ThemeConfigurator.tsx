@@ -4,7 +4,8 @@ import clsx from "clsx";
 import { DivProps } from "react-html-props";
 import { FormattedMessage } from "react-intl";
 
-import { ThemeMode, ThemeVariant, useTheme } from "@/contexts/ThemeProvider";
+import { useTheme } from "@/contexts/ThemeProvider";
+import { ThemeMode, ThemeVariant } from "@/types/theme";
 
 import { Toggle } from "../Toggle";
 import styles from "./ThemeConfigurator.module.scss";

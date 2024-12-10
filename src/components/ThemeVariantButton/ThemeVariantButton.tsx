@@ -1,6 +1,7 @@
 "use client";
 
-import { ThemeVariant, useTheme } from "@/contexts/ThemeProvider";
+import { useTheme } from "@/contexts/ThemeProvider";
+import { ThemeVariant } from "@/types/theme";
 
 import { Button, ButtonProps } from "../Button";
 

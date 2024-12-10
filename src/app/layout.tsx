@@ -4,7 +4,8 @@ import "./globals.scss";
 import { i18n } from "i18n-config";
 import localFont from "next/font/local";
 
-import _metadata from "@/constants/metadata.json";
+import { METADATA } from "@/constants/metadata";
+import { DEFAULT_THEME_MODE, DEFAULT_THEME_VARIANT } from "@/constants/theme";
 import AppProviders from "@/contexts/AppProviders";
 import { getDictionary } from "@/utils/get-dictionary";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -103,16 +104,16 @@ const iosevka = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
-  title: _metadata.title,
-  applicationName: _metadata.shortName,
-  description: _metadata.description,
-  authors: _metadata.authors,
-  generator: _metadata.generator,
+  title: METADATA.title,
+  applicationName: METADATA.shortName,
+  description: METADATA.description,
+  authors: METADATA.authors,
+  generator: METADATA.generator,
   openGraph: {
     type: "website",
-    title: _metadata.title,
-    siteName: _metadata.shortName,
-    description: _metadata.description,
+    title: METADATA.title,
+    siteName: METADATA.shortName,
+    description: METADATA.description,
     url: new URL(process.env.NEXT_PUBLIC_BASE_URL),
     images: [
       {
@@ -166,7 +167,12 @@ export default async function RootLayout({
   const messages = await getDictionary(lang);
 
   return (
-    <html lang={lang} data-theme-source="auto">
+    <html
+      lang={lang}
+      data-theme-source="auto"
+      data-theme-mode={DEFAULT_THEME_MODE}
+      data-theme-variant={DEFAULT_THEME_VARIANT}
+    >
       <body className={`${iosevka.variable}`}>
         <AppProviders intl={{ locale: lang, messages: messages }}>
           <AppLayout>{children}</AppLayout>
