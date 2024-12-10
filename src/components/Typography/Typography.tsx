@@ -15,6 +15,10 @@ const H2: React.FC<HeadingBaseProps> = ({ className, ...props }) => {
   return <h2 className={clsx(styles.h2, className)} {...props} />;
 };
 
+const H3: React.FC<HeadingBaseProps> = ({ className, ...props }) => {
+  return <h3 className={clsx(styles.h3, className)} {...props} />;
+};
+
 const P: React.FC<
   ParagraphBaseProps & {
     size?: "small" | "medium" | "large";
@@ -28,6 +32,7 @@ const P: React.FC<
 const Typography = {
   H1,
   H2,
+  H3,
   P,
 };
 

@@ -4,6 +4,12 @@
   min-height: 100%;
   display: grid;
   align-items: center;
+
+  @include mixins.tablet {
+    br {
+      display: none;
+    }
+  }
 }
 
 .text {

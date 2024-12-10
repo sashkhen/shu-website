@@ -1,15 +1,15 @@
 import type { MetadataRoute } from "next";
-import metadata from "@/constants/metadata.json";
+import { METADATA } from "@/constants/metadata";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: metadata.title,
-    short_name: metadata.shortName,
-    description: metadata.description,
+    name: METADATA.title,
+    short_name: METADATA.shortName,
+    description: METADATA.description,
     start_url: "/",
     display: "standalone",
-    background_color: metadata.backgroundColor,
-    theme_color: metadata.themeColor,
+    background_color: METADATA.backgroundColor,
+    theme_color: METADATA.themeColor,
     icons: [
       {
         src: "/android-chrome-192x192.png",

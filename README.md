@@ -3,6 +3,8 @@
 - 4 theme combinations - 2 variants x 2 modes (light/dark)
 - responsive
 - PWA
+- SSG
+- Intl
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
@@ -24,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load custom fonts.
 
 ## Contributing
 
@@ -42,7 +44,9 @@ npm run generate:component Button
 
 In order to update static data that appears in UI please update `./src/constants/data.json`. For localization, please see [Localization](##Localization).
 
-In order to update metadata used in `<head>` and `manifest.json`, please update `./src/constants/metadata.json`.
+In order to update metadata used in `<head>` and `manifest.json`, please update `./src/constants/metadata.ts`.
+
+In order to update default theme used in `<html>`, `<head>` and in `<ThemeProvider>` please update `./src/constants/theme.ts`.
 
 ### Localization
 
