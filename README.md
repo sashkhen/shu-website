@@ -42,7 +42,9 @@ npm run generate:component Button
 
 In order to update static data that appears in UI please update `./src/constants/data.json`. For localization, please see [Localization](##Localization).
 
-In order to update metadata used in `<head>` and `manifest.json`, please update `./src/constants/metadata.json`.
+In order to update metadata used in `<head>` and `manifest.json`, please update `./src/constants/metadata.ts`.
+
+In order to update default theme used in `<html>`, `<head>` and in `<ThemeProvider>` please update `./src/constants/theme.ts`.
 
 ### Localization
 

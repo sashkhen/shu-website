@@ -2,12 +2,12 @@ import { Metadata } from "next/types";
 
 import { HeroContact } from "@/components/HeroContact";
 import { Social } from "@/components/Social";
-import _metadata from "@/constants/metadata.json";
+import { METADATA } from "@/constants/metadata";
 
 import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
-  title: `Contact | ${_metadata.title}`,
+  title: `Contact | ${METADATA.title}`,
 };
 
 export default async function Contact() {
