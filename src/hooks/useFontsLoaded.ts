@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const useTimeout = (callback: () => void, delay: number | null) => {
+const useFontsLoaded = (callback: () => void) => {
   const savedCallback = useRef<typeof callback>();
 
   useEffect(() => {
@@ -8,17 +8,16 @@ const useTimeout = (callback: () => void, delay: number | null) => {
   });
 
   useEffect(() => {
-    function tick() {
+    function runCallback() {
       if (savedCallback.current) {
         savedCallback.current();
       }
     }
 
-    if (delay !== null) {
-      const id = setTimeout(tick, delay);
-      return () => clearTimeout(id);
+    if (typeof document !== "undefined") {
+      document.fonts.ready.then(runCallback);
     }
-  }, [delay]);
+  }, []);
 };
 
-export default useTimeout;
+export default useFontsLoaded;

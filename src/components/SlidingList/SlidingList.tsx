@@ -4,6 +4,7 @@ import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import { DivProps } from "react-html-props";
 
+import useFontsLoaded from "@/hooks/useFontsLoaded";
 import useOnResize from "@/hooks/useOnResize";
 
 import styles from "./SlidingList.module.scss";
@@ -35,6 +36,10 @@ const SlidingList: React.FC<SlidingListProps> = ({
   }, [activeEl]);
 
   useOnResize(() => {
+    setStyle(getSliderVars(activeEl));
+  });
+
+  useFontsLoaded(() => {
     setStyle(getSliderVars(activeEl));
   });
 
