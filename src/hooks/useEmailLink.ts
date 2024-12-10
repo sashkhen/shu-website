@@ -13,7 +13,9 @@ const useEmailLink = (address = data.contact.email) => {
     return `mailto:${address}?${new URLSearchParams({
       subject,
       body,
-    }).toString()}`;
+    })
+      .toString()
+      .replace(/\+/gim, "%20")}`;
   }, [address, intl]);
 };
 
