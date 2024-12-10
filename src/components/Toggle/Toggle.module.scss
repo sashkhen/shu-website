@@ -15,12 +15,6 @@
   width: var(--width);
   height: var(--height);
 
-  &:focus,
-  &:focus-visible,
-  &:focus-within {
-    outline: none;
-  }
-
   input {
     opacity: 0;
     width: 0;
@@ -77,4 +71,16 @@
 
 .input:checked + .slider:before {
   transform: translateX(calc(var(--height) * (var(--ratio) - 1)));
+}
+
+.input:focus + .slider,
+.input:focus-visible + .slider {
+  outline-width: 0.125rem;
+  outline-style: auto;
+  outline-color: Highlight;
+  outline-color: -webkit-focus-ring-color;
+}
+
+.input:focus + .slider {
+  outline-offset: 0.25rem;
 }
