@@ -46,15 +46,15 @@ const Navigation: React.FC<NavigationProps> = ({ className, ...props }) => {
           const active = pathname === item.pathname;
 
           return (
-            <Link
+            <div
               key={item.id}
-              href={item.pathname}
               className={styles.item}
-              data-active={active}
               ref={active ? activeRef : null}
             >
-              <FormattedMessage id={item.id} />
-            </Link>
+              <Link href={item.pathname} data-active={active}>
+                <FormattedMessage id={item.id} />
+              </Link>
+            </div>
           );
         })}
       </SlidingList>

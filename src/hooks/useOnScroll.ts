@@ -1,7 +1,7 @@
 import debounce from "lodash.debounce";
 import { useEffect } from "react";
 
-function useOnScroll(callback: () => void, ms = 100) {
+const useOnScroll = (callback: () => void, ms = 100) => {
   useEffect(() => {
     const debouncedHandleScroll = debounce(callback, ms);
 
@@ -11,6 +11,6 @@ function useOnScroll(callback: () => void, ms = 100) {
       window.removeEventListener("scroll", debouncedHandleScroll);
     };
   });
-}
+};
 
 export default useOnScroll;

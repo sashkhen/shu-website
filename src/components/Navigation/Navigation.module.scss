@@ -25,21 +25,26 @@
 
 .item {
   position: relative;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1;
 
-  @include mixins.tablet {
-    padding: 0.875rem 1.75rem;
+  a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+
+    @include mixins.tablet {
+      padding: 0.875rem 1.75rem;
+    }
   }
 
-  &:not(:first-of-type)::before {
+  &:not(:last-child)::before {
     content: "/";
     position: absolute;
-    left: calc(var(--space) / 2 * -1);
-    transform: translateX(-50%);
+    top: 50%;
+    right: calc(var(--space) / 2 * -1);
+    transform: translate(50%, -50%);
     opacity: 0.5;
   }
 }

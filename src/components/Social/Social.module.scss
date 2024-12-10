@@ -31,7 +31,9 @@
         transition: transform 0.2s ease-out;
       }
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:focus-visible {
         &::after {
           transform: translate(0.5rem, 0);
         }
