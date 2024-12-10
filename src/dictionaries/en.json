@@ -17,6 +17,12 @@
   "notFound.back": {
     "defaultMessage": "Return Home"
   },
+  "email.subject": {
+    "defaultMessage": "Let's Collaborate!"
+  },
+  "email.body": {
+    "defaultMessage": "Hi Sasha,\n\nI came across your website and wanted to reach out.\n\nI would love to discuss how we could collaborate or explore potential opportunities to work together. Here's a bit about my project/idea:\n[Describe your project or idea here]\n\nLooking forward to hearing from you!\n\nBest regards,\n[Your Name]"
+  },
   "home.title": {
     "defaultMessage": "Hello! {br}My name is Sasha"
   },
