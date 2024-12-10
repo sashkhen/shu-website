@@ -294,7 +294,15 @@
   "home.title": [
     {
       "type": 0,
-      "value": "Hello! My name is Sasha"
+      "value": "Hello! "
+    },
+    {
+      "type": 1,
+      "value": "br"
+    },
+    {
+      "type": 0,
+      "value": "My name is Sasha"
     }
   ],
   "navLinks.about": [

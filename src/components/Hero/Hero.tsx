@@ -17,11 +17,11 @@ const Hero: React.FC<HeroProps> = ({ className, ...props }) => {
     <div className={clsx(styles.root, className)} {...props}>
       <div>
         <Typography.H1>
-          <FormattedMessage id="home.title" />
+          <FormattedMessage id="home.title" values={{ br: <br key="br" /> }} />
         </Typography.H1>
-        <Typography.H2>
+        <Typography.H3>
           <FormattedMessage id="home.subtitle" />
-        </Typography.H2>
+        </Typography.H3>
         <TextContainer className={styles.text}>
           <Typography.P>
             <FormattedMessage id="home.text" />
