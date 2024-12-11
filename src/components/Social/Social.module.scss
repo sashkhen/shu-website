@@ -38,6 +38,12 @@
           transform: translate(0.5rem, 0);
         }
       }
+
+      &:focus:not(:focus-visible) {
+        &::after {
+          transform: translate(0, 0);
+        }
+      }
     }
   }
 }

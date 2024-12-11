@@ -84,3 +84,7 @@
 .input:focus + .slider {
   outline-offset: 0.25rem;
 }
+
+.input:focus:not(:focus-visible) + .slider {
+  outline: none;
+}
