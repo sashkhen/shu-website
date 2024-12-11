@@ -1,23 +1,20 @@
-@use "sass:math";
 @use "../../styles/theme";
 
-$elements-count: 100;
-
-@mixin square($color) {
-  border: #{math.random(10)}px solid $color;
+@mixin square() {
+  border: var(--dot-border-width) solid var(--dot-color);
 }
 
-@mixin circle($color) {
+@mixin circle() {
   border-radius: 50%;
-  border: #{math.random(10)}px solid $color;
+  border: var(--dot-border-width) solid var(--dot-color);
 }
 
-@mixin disc($color) {
+@mixin disc() {
   border-radius: 50%;
-  background-color: $color;
+  background-color: var(--dot-color);
 }
 
-@mixin cross($color) {
+@mixin cross() {
   background-color: transparent;
 
   &::before,
@@ -26,8 +23,8 @@ $elements-count: 100;
     display: block;
     position: absolute;
     inset: 0;
-    width: #{(math.random(15) + 10%)};
-    background-color: $color;
+    width: var(--dot-border-width);
+    background-color: var(--dot-color);
     border-radius: 0.25rem;
   }
 
@@ -41,18 +38,12 @@ $elements-count: 100;
 }
 
 .root {
-  --color-1: var(--color-yellow);
-  --color-2: var(--color-orange);
-  --color-3: var(--color-green);
-  --color-4: var(--color-violet);
-  --color-5: var(--color-blue);
-
-  :root[data-theme-variant="purple"] & {
-    --color-1: var(--color-purple);
-    --color-2: var(--color-purple);
-    --color-3: var(--color-purple);
-    --color-4: var(--color-purple);
-    --color-5: var(--color-purple);
+  :root[data-theme-variant="plain"] & {
+    --dot-color-1: var(--color-yellow);
+    --dot-color-2: var(--color-orange);
+    --dot-color-3: var(--color-green);
+    --dot-color-4: var(--color-violet);
+    --dot-color-5: var(--color-blue);
   }
 
   position: absolute;
@@ -62,80 +53,51 @@ $elements-count: 100;
   min-height: 100vh;
 }
 
-@include theme.darkMode {
-  &[data-theme-variant="purple"] {
-    .root {
-      --color-1: var(--color-pink);
-      --color-2: var(--color-pink);
-      --color-3: var(--color-pink);
-      --color-4: var(--color-pink);
-      --color-5: var(--color-pink);
-    }
-  }
-}
-
 .dot {
   position: absolute;
+  top: calc(var(--dot-top-start) + 100vh);
+  left: var(--dot-left);
   display: block;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  animation: dot-animation var(--dot-duration) linear infinite;
+
+  :root[data-theme-variant="purple"] & {
+    @include disc();
+  }
+
+  :root:not([data-theme-variant="purple"]) & {
+    &:nth-child(3n + 1) {
+      @include circle();
+    }
+
+    &:nth-child(3n + 2) {
+      @include square();
+    }
+
+    &:nth-child(3n + 3) {
+      @include cross();
+    }
+  }
 }
 
-@for $i from 1 through $elements-count {
-  $size: #{math.random(26)}px;
-  $color: var(--color-#{math.random(5)}, #000);
-  $opacity: calc(0.4 + 0.4 / math.random(10));
-  $duration: calc(10 + 100 / math.random(10));
-  $turns: math.random(5) + 4;
-  $top: math.random(100) * 1%;
-  $toTop: math.random(100) * 1% * -1;
-  $left: math.random(100) * 1%;
+@keyframes dot-animation {
+  10% {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    opacity: var(--dot-opacity);
+    transform: var(--dot-transform-1);
+  }
 
-  @keyframes dot-#{$i} {
-    10% {
-      transform: scale(1);
-      opacity: $opacity;
-    }
-
-    @for $i from 1 through $turns {
-      $threshold: calc($i * 99% / $turns);
-
-      #{$threshold} {
-        transform: translateX(
-            #{(math.random(25) + 25) * (math.random(2) - 1)}px
-          )
-          rotate(#{math.random(360)}deg);
-      }
-    }
-
-    100% {
-      top: $toTop;
+  @for $i from 2 through 9 {
+    #{$i * 10%} {
+      transform: var(--dot-transform-#{$i});
     }
   }
 
-  .dot:nth-child(#{$i}) {
-    top: calc(#{$top} + 100vh);
-    left: $left;
-    width: $size;
-    height: $size;
-    transform: scale(0);
-    opacity: 0;
-    animation: dot-#{$i} #{$duration}s ease-out infinite;
-
-    :root[data-theme-variant="purple"] & {
-      @include disc($color);
-    }
-
-    :root:not([data-theme-variant="purple"]) & {
-      @if ($i % 3 == 0) {
-        @include cross($color);
-      }
-
-      @if ($i % 3 == 1) {
-        @include square($color);
-      }
-
-      @if ($i % 3 == 2) {
-        @include circle($color);
-      }
-    }
+  100% {
+    top: var(--dot-top-end);
+    transform: var(--dot-transform-10);
   }
 }

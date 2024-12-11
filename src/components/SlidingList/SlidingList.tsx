@@ -17,10 +17,10 @@ export type SlidingListProps = BaseProps & {
 
 const getSliderVars = (el?: HTMLElement) =>
   ({
-    "--active-offset-x": `${el?.offsetLeft ?? 0}px`,
-    "--active-offset-y": `${el?.offsetTop ?? 0}px`,
-    "--active-width": `${el?.offsetWidth ?? 0}px`,
-    "--active-height": `${el?.offsetHeight ?? 0}px`,
+    "--list-active-offset-x": `${el?.offsetLeft ?? 0}px`,
+    "--list-active-offset-y": `${el?.offsetTop ?? 0}px`,
+    "--list-active-width": `${el?.offsetWidth ?? 0}px`,
+    "--list-active-height": `${el?.offsetHeight ?? 0}px`,
   } as React.CSSProperties);
 
 const SlidingList: React.FC<SlidingListProps> = ({

@@ -18,26 +18,26 @@ const iosevka = localFont({
   variable: "--font-iosevka",
   display: "swap",
   src: [
-    {
-      path: "../assets/fonts/Iosevka-ExtraLight.woff2",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtraLightOblique.woff2",
-      weight: "200",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-Light.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-LightOblique.woff2",
-      weight: "300",
-      style: "oblique",
-    },
+    // {
+    //   path: "../assets/fonts/Iosevka-ExtraLight.woff2",
+    //   weight: "200",
+    //   style: "normal",
+    // },
+    // {
+    //   path: "../assets/fonts/Iosevka-ExtraLightOblique.woff2",
+    //   weight: "200",
+    //   style: "oblique",
+    // },
+    // {
+    //   path: "../assets/fonts/Iosevka-Light.woff2",
+    //   weight: "300",
+    //   style: "normal",
+    // },
+    // {
+    //   path: "../assets/fonts/Iosevka-LightOblique.woff2",
+    //   weight: "300",
+    //   style: "oblique",
+    // },
 
     {
       path: "../assets/fonts/Iosevka-Regular.woff2",
@@ -54,51 +54,51 @@ const iosevka = localFont({
       weight: "500",
       style: "normal",
     },
-    {
-      path: "../assets/fonts/Iosevka-MediumOblique.woff2",
-      weight: "500",
-      style: "oblique",
-    },
+    // {
+    //   path: "../assets/fonts/Iosevka-MediumOblique.woff2",
+    //   weight: "500",
+    //   style: "oblique",
+    // },
     {
       path: "../assets/fonts/Iosevka-SemiBold.woff2",
       weight: "600",
       style: "normal",
     },
-    {
-      path: "../assets/fonts/Iosevka-SemiBoldOblique.woff2",
-      weight: "600",
-      style: "oblique",
-    },
+    // {
+    //   path: "../assets/fonts/Iosevka-SemiBoldOblique.woff2",
+    //   weight: "600",
+    //   style: "oblique",
+    // },
     {
       path: "../assets/fonts/Iosevka-Bold.woff2",
       weight: "700",
       style: "normal",
     },
-    {
-      path: "../assets/fonts/Iosevka-BoldOblique.woff2",
-      weight: "700",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtraBold.woff2",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-ExtraBoldOblique.woff2",
-      weight: "800",
-      style: "oblique",
-    },
-    {
-      path: "../assets/fonts/Iosevka-Heavy.woff2",
-      weight: "900",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/Iosevka-HeavyOblique.woff2",
-      weight: "900",
-      style: "oblique",
-    },
+    // {
+    //   path: "../assets/fonts/Iosevka-BoldOblique.woff2",
+    //   weight: "700",
+    //   style: "oblique",
+    // },
+    // {
+    //   path: "../assets/fonts/Iosevka-ExtraBold.woff2",
+    //   weight: "800",
+    //   style: "normal",
+    // },
+    // {
+    //   path: "../assets/fonts/Iosevka-ExtraBoldOblique.woff2",
+    //   weight: "800",
+    //   style: "oblique",
+    // },
+    // {
+    //   path: "../assets/fonts/Iosevka-Heavy.woff2",
+    //   weight: "900",
+    //   style: "normal",
+    // },
+    // {
+    //   path: "../assets/fonts/Iosevka-HeavyOblique.woff2",
+    //   weight: "900",
+    //   style: "oblique",
+    // },
   ],
 });
 

@@ -1,8 +1,8 @@
 @use "../../styles/mixins";
 
 .root {
-  --gap: 1rem;
-  --top: 0;
+  --sticky-section-gap: 1rem;
+  --sticky-section-top: 0;
 
   display: grid;
   align-items: start;
@@ -10,13 +10,13 @@
   gap: 0;
 
   @include mixins.desktop {
-    gap: var(--gap);
+    gap: var(--sticky-section-gap);
   }
 }
 
 .stickyEl {
   position: sticky;
-  top: var(--top);
+  top: var(--sticky-section-top);
   width: 0;
   opacity: 0.1;
 

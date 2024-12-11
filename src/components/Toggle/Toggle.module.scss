@@ -1,19 +1,19 @@
 @use "../../styles/theme";
 
 .root {
-  --ratio: var(--toggle-ratio, 1.75);
-  --border: var(--toggle-border, 0.25rem);
-  --height: var(--toggle-height, 2rem);
-  --width: calc(var(--height) * var(--ratio));
+  --toggle-ratio: 1.75;
+  --toggle-border: 0.25rem;
+  --toggle-height: 2rem;
+  --toggle-width: calc(var(--toggle-height) * var(--toggle-ratio));
 
-  --color-toggle: hsl(var(--color-white-h), var(--color-white-s), 100%);
-  --color-inactive: hsl(var(--color-white-h), var(--color-white-s), 75%);
-  --color-active: var(--foreground);
+  --toggle-color-control: hsl(var(--color-white-h), var(--color-white-s), 100%);
+  --toggle-color-inactive: hsl(var(--color-white-h), var(--color-white-s), 75%);
+  --toggle-color-active: var(--foreground);
 
   position: relative;
   display: inline-block;
-  width: var(--width);
-  height: var(--height);
+  width: var(--toggle-width);
+  height: var(--toggle-height);
 
   input {
     opacity: 0;
@@ -30,8 +30,8 @@
 
 @include theme.darkMode {
   .root {
-    --color-inactive: var(--foreground);
-    --color-active: var(--color-orange);
+    --toggle-color-inactive: var(--foreground);
+    --toggle-color-active: var(--color-orange);
   }
 }
 
@@ -42,20 +42,20 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: var(--height);
-  background-color: var(--color-inactive);
+  border-radius: var(--toggle-height);
+  background-color: var(--toggle-color-inactive);
   transition-property: background-color, box-shadow;
 }
 
 .slider::before {
   position: absolute;
   content: "";
-  height: calc(var(--height) - var(--border) * 2);
-  width: calc(var(--height) - var(--border) * 2);
-  left: var(--border);
-  bottom: var(--border);
+  height: calc(var(--toggle-height) - var(--toggle-border) * 2);
+  width: calc(var(--toggle-height) - var(--toggle-border) * 2);
+  left: var(--toggle-border);
+  bottom: var(--toggle-border);
   border-radius: 50%;
-  background-color: var(--color-toggle);
+  background-color: var(--toggle-color-control);
   transition-property: background-color, box-shadow, transform;
 }
 
@@ -66,11 +66,11 @@
 }
 
 .input:checked + .slider {
-  background-color: var(--color-active);
+  background-color: var(--toggle-color-active);
 }
 
 .input:checked + .slider:before {
-  transform: translateX(calc(var(--height) * (var(--ratio) - 1)));
+  transform: translateX(calc(var(--toggle-height) * (var(--toggle-ratio) - 1)));
 }
 
 .input:focus + .slider,
@@ -83,4 +83,8 @@
 
 .input:focus + .slider {
   outline-offset: 0.25rem;
+}
+
+.input:focus:not(:focus-visible) + .slider {
+  outline: none;
 }
