@@ -1,12 +1,12 @@
 @use "../../styles/theme";
 
 @mixin square() {
-  border: var(--border-width) solid var(--dot-color);
+  border: var(--dot-border-width) solid var(--dot-color);
 }
 
 @mixin circle() {
   border-radius: 50%;
-  border: var(--border-width) solid var(--dot-color);
+  border: var(--dot-border-width) solid var(--dot-color);
 }
 
 @mixin disc() {
@@ -23,7 +23,7 @@
     display: block;
     position: absolute;
     inset: 0;
-    width: var(--border-width);
+    width: var(--dot-border-width);
     background-color: var(--dot-color);
     border-radius: 0.25rem;
   }
@@ -39,11 +39,11 @@
 
 .root {
   :root[data-theme-variant="plain"] & {
-    --color-1: var(--color-yellow);
-    --color-2: var(--color-orange);
-    --color-3: var(--color-green);
-    --color-4: var(--color-violet);
-    --color-5: var(--color-blue);
+    --dot-color-1: var(--color-yellow);
+    --dot-color-2: var(--color-orange);
+    --dot-color-3: var(--color-green);
+    --dot-color-4: var(--color-violet);
+    --dot-color-5: var(--color-blue);
   }
 
   position: absolute;
@@ -55,13 +55,13 @@
 
 .dot {
   position: absolute;
-  top: calc(var(--top) + 100vh);
-  left: var(--left);
+  top: calc(var(--dot-top-start) + 100vh);
+  left: var(--dot-left);
   display: block;
   width: 0;
   height: 0;
   opacity: 0;
-  animation: dot-animation var(--duration) linear infinite;
+  animation: dot-animation var(--dot-duration) linear infinite;
 
   :root[data-theme-variant="purple"] & {
     @include disc();
@@ -84,20 +84,20 @@
 
 @keyframes dot-animation {
   10% {
-    width: var(--size);
-    height: var(--size);
-    opacity: var(--opacity);
-    transform: var(--transform-1);
+    width: var(--dot-size);
+    height: var(--dot-size);
+    opacity: var(--dot-opacity);
+    transform: var(--dot-transform-1);
   }
 
   @for $i from 2 through 9 {
     #{$i * 10%} {
-      transform: var(--transform-#{$i});
+      transform: var(--dot-transform-#{$i});
     }
   }
 
   100% {
-    top: var(--toTop);
-    transform: var(--transform-10);
+    top: var(--dot-top-end);
+    transform: var(--dot-transform-10);
   }
 }

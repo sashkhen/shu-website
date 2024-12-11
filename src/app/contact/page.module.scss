@@ -1,13 +1,6 @@
 @use "../../styles/mixins";
 
 .root {
-  --color: var(--foreground);
-  --color-hover: hsl(
-    var(--foreground-h),
-    var(--foreground-s),
-    calc(var(--foreground-l) + var(--hover-offset))
-  );
-
   min-height: 100%;
   display: flex;
   flex-direction: column;

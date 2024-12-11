@@ -8,8 +8,8 @@
 }
 
 .root {
-  --size: 0.125rem;
-  --duration: 0.45s;
+  --loader-size: 0.125rem;
+  --loader-duration: 0.45s;
 
   display: flex;
   justify-content: center;
@@ -22,28 +22,28 @@
 }
 
 .dot {
-  padding: calc(var(--size) * 7);
+  padding: calc(var(--loader-size) * 7);
 
   &::after {
     content: "";
     display: block;
-    width: var(--size);
-    height: var(--size);
+    width: var(--loader-size);
+    height: var(--loader-size);
     border-radius: 50%;
     background-color: var(--foreground);
 
     animation-name: pulse;
-    animation-duration: var(--duration);
+    animation-duration: var(--loader-duration);
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
   }
 
   &:nth-child(2)::after {
-    animation-delay: calc(var(--duration) / 3 * 1);
+    animation-delay: calc(var(--loader-duration) / 3 * 1);
   }
 
   &:nth-child(3)::after {
-    animation-delay: calc(var(--duration) / 3 * 2);
+    animation-delay: calc(var(--loader-duration) / 3 * 2);
   }
 }

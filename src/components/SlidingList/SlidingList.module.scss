@@ -1,11 +1,11 @@
 .root {
-  --transition-duration: 0.2s;
-  --transition-timing-function: ease-out;
+  --list-transition-duration: 0.2s;
+  --list-transition-timing-function: ease-out;
 
-  --active-width: 0;
-  --active-height: 0;
-  --active-offset-x: 0;
-  --active-offset-y: 0;
+  --list-active-width: 0;
+  --list-active-height: 0;
+  --list-active-offset-x: 0;
+  --list-active-offset-y: 0;
 
   position: relative;
   display: inline-grid;
@@ -15,20 +15,20 @@
   [data-role="slider"] {
     content: "";
     position: absolute;
-    top: var(--active-offset-y, 0);
-    left: var(--active-offset-x, 0);
+    top: var(--list-active-offset-y, 0);
+    left: var(--list-active-offset-x, 0);
     display: block;
-    width: var(--active-width, 0);
-    height: var(--active-height, 0);
+    width: var(--list-active-width, 0);
+    height: var(--list-active-height, 0);
     transition-property: top, left;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--list-transition-duration);
+    transition-timing-function: var(--list-transition-timing-function);
     pointer-events: none;
   }
 
   * {
     z-index: 0;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
+    transition-duration: var(--list-transition-duration);
+    transition-timing-function: var(--list-transition-timing-function);
   }
 }

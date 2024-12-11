@@ -1,7 +1,7 @@
 @use "../../styles/mixins";
 
 .root {
-  --space: 1.5rem;
+  --nav-space: 1.5rem;
 
   display: flex;
   gap: 1rem;
@@ -16,7 +16,7 @@
 }
 
 .list {
-  gap: var(--space);
+  gap: var(--nav-space);
 
   [data-role="slider"] {
     border-bottom: 0.125rem solid var(--foreground);
@@ -43,7 +43,7 @@
     content: "/";
     position: absolute;
     top: 50%;
-    right: calc(var(--space) / 2 * -1);
+    right: calc(var(--nav-space) / 2 * -1);
     transform: translate(50%, -50%);
     opacity: 0.5;
   }

@@ -21,21 +21,21 @@ const Background: React.FC<BackgroundProps> = ({ className, ...props }) => {
         const size = getRandomNum(8, 32);
 
         return {
-          "--size": size + "px",
-          "--border-width": getRandomNum(1, size / 2) + "px",
-          "--dot-color": `var(--color-${getRandomNum(
+          "--dot-size": size + "px",
+          "--dot-border-width": getRandomNum(1, size / 2) + "px",
+          "--dot-color": `var(--dot-color-${getRandomNum(
             1,
             5
           )}, var(--foreground))`,
-          "--opacity": getRandomNum(40, 80) / 100,
-          "--duration": getRandomNum(10, 100) + "s",
-          "--left": getRandomNum(0, 100) + "%",
-          "--top": getRandomNum(0, 100) + "%",
-          "--toTop": getRandomNum(0, 100) * -1 + "%",
+          "--dot-opacity": getRandomNum(40, 80) / 100,
+          "--dot-duration": getRandomNum(10, 100) + "s",
+          "--dot-left": getRandomNum(0, 100) + "%",
+          "--dot-top-start": getRandomNum(0, 100) + "%",
+          "--dot-top-end": getRandomNum(0, 100) * -1 + "%",
           ...Array.from(Array(10)).reduce((acc, _, i) => {
             return {
               ...acc,
-              [`--transform-${i + 1}`]: `translateX(${getRandomNum(
+              [`--dot-transform-${i + 1}`]: `translateX(${getRandomNum(
                 0,
                 200
               )}%) rotate(${getRandomNum(-360, 360)}deg)`,
